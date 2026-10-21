@@ -2,7 +2,7 @@
 
 A personal portfolio built as a single-file terminal-style IDE interface.
 
-**Live:** _add the GitHub Pages URL after publishing_
+**Live:** https://ragul29.github.io/ragul-portfolio
 
 ---
 
