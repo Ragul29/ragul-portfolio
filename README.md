@@ -12,7 +12,7 @@ The whole site is one application window: a macOS-style title bar, a file-tree
 sidebar, a tab bar, a scrolling content pane, a live terminal panel on the
 right, and a VS Code-style status bar at the bottom.
 
-Everything lives in `landing.html` — no build step, no framework, no
+Everything lives in `index.html` — no build step, no framework, no
 dependencies. Open the file and it runs.
 
 ## Features
@@ -75,6 +75,11 @@ python3 -m http.server 8000
 ```
 
 Then visit <http://localhost:8000>. No build step required.
+
+## Deployment
+
+Deployed to GitHub Pages. The repo root has a `.nojekyll` file so Pages
+serves `index.html` verbatim instead of running it through Jekyll.
 
 ## Tech
 
