@@ -1,0 +1,5718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ragul Murugan — AI Engineer | Cloud, .NET &amp; Agentic Workflows</title>
+
+  <meta
+    name="description"
+    content="Senior Software Engineer at Xerox. 7+ years building cloud platforms on AWS and Azure, .NET microservices, and AI document intelligence with pgvector."
+  />
+  <meta name="author" content="Ragul Murugan" />
+  <meta name="theme-color" content="#0e0d0c" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://ragulmurugan.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Ragul Murugan" />
+  <meta property="og:title" content="Ragul Murugan — AI Engineer | Cloud, .NET &amp; Agentic Workflows" />
+  <meta
+    property="og:description"
+    content="Senior Software Engineer at Xerox. 7+ years building cloud platforms, .NET microservices, AI document intelligence, and agentic AI workflows."
+  />
+  <meta property="og:url" content="https://ragulmurugan.dev/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ragulmurugan.dev/og-image.png" />
+  <meta property="og:image:alt" content="Ragul Murugan — AI Engineer" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ragul Murugan — AI Engineer" />
+  <meta
+    name="twitter:description"
+    content="Senior Software Engineer at Xerox. Cloud platforms, .NET microservices, AI document intelligence, agentic workflows."
+  />
+  <meta name="twitter:image" content="https://ragulmurugan.dev/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ragul Murugan",
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Xerox"
+      },
+      "url": "https://ragulmurugan.dev/",
+      "sameAs": [
+        "https://www.linkedin.com/in/ragul-murugan-9a2205123/"
+      ],
+      "knowsAbout": [
+        "Cloud Architecture",
+        "AWS",
+        "Microsoft Azure",
+        "C#",
+        ".NET",
+        "Microservices",
+        "Angular",
+        "Blazor",
+        "AI Document Intelligence",
+        "Azure OpenAI",
+        "PostgreSQL",
+        "pgvector",
+        "Semantic Search",
+        "Model Context Protocol",
+        "Agentic AI",
+        "CI/CD",
+        "OAuth 2.0",
+        "OIDC",
+        "PKCE"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Jeppiaar Institute of Technology",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Anna University"
+        }
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Bachelor of Engineering in Computer Science and Engineering"
+      },
+      "description": "Senior Software Engineer at Xerox with 7+ years of experience in cloud integration, .NET microservices, AI document intelligence, and agentic AI workflows."
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --background: #050505;
+      --surface: #0c0c0c;
+      --surface-raised: #121212;
+      --surface-light: #181818;
+      --text: #f5f5f5;
+      --muted: #9c9c9c;
+      --red: #e82127;
+      --red-light: #ff4148;
+      --green: #50e3a4;
+      --border: rgba(255, 255, 255, 0.12);
+      --container: 1240px;
+      --header-height: 82px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--background);
+    }
+
+    body {
+      overflow-x: hidden;
+      color: var(--text);
+      background: var(--background);
+      font-family:
+        Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    ::selection {
+      color: #fff;
+      background: var(--red);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      color: inherit;
+      font: inherit;
+    }
+
+    svg {
+      display: block;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--red-light);
+      outline-offset: 5px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 12px 18px;
+      color: #000;
+      background: #fff;
+      transform: translateY(-150%);
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(90px, 11vw, 150px) 0;
+      scroll-margin-top: var(--header-height);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 25px;
+      color: #c7c7c7;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 30px;
+      height: 1px;
+      content: "";
+      background: var(--red);
+    }
+
+    .section-title {
+      max-width: 1000px;
+      font-size: clamp(2.6rem, 6vw, 5.8rem);
+      font-weight: 650;
+      letter-spacing: -0.065em;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    .section-title em {
+      color: var(--red);
+      font-style: normal;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+
+    /* Header */
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      height: var(--header-height);
+      border-bottom: 1px solid transparent;
+      transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        backdrop-filter 0.3s ease;
+    }
+
+    /* Skill §12 — scroll edge effect, not a hard divider.
+       A short gradient mask where content meets the floating
+       header, instead of a 1px rule cutting across the page. */
+
+    .site-header::after {
+      position: absolute;
+      inset: 100% 0 auto;
+      height: 28px;
+      content: "";
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        transparent
+      );
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s var(--ease-apple);
+    }
+
+    .site-header.scrolled::after {
+      opacity: 1;
+    }
+
+    .site-header.scrolled {
+      border-color: var(--border);
+      background: rgba(5, 5, 5, 0.85);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-shell {
+      width: min(calc(100% - 48px), 1400px);
+      height: 100%;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid #fff;
+      font-size: 0.84rem;
+      letter-spacing: 0;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(22px, 3vw, 44px);
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #c8c8c8;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 1px;
+      content: "";
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-links a.is-active {
+      color: #fff;
+    }
+
+    .nav-links a.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 16px;
+      border: 1px solid var(--border);
+      font-size: 0.73rem;
+      font-weight: 750;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      border-color: #fff;
+      background: #fff;
+      color: #000;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: relative;
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 1px;
+      margin: 5px auto;
+      background: #fff;
+      transition: transform 0.25s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      padding: calc(var(--header-height) + 65px) 0 55px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, #000, transparent 92%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      position: absolute;
+      top: 4%;
+      right: -18%;
+      width: 65vw;
+      height: 65vw;
+      content: "";
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(0, 113, 227, 0.18),
+        transparent 66%
+      );
+      filter: blur(25px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.5fr);
+      align-items: end;
+      gap: clamp(40px, 7vw, 100px);
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 27px;
+      color: #d1d1d1;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      animation: fade-up 0.8s 0.1s both;
+    }
+
+    .availability-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 15px var(--red);
+    }
+
+    .availability-dot::after {
+      position: absolute;
+      inset: -5px;
+      content: "";
+      border: 1px solid var(--red);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .hero h1 {
+      max-width: 1050px;
+      font-size: clamp(3.8rem, 8.6vw, 8.8rem);
+      font-weight: 700;
+      letter-spacing: -0.08em;
+      line-height: 0.86;
+      text-transform: uppercase;
+    }
+
+    .hero-line {
+      display: block;
+      animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      /* Skill §11 — hint the compositor that motion is imminent */
+      will-change: transform, opacity;
+    }
+
+    .hero-line:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .hero-line:nth-child(3) {
+      animation-delay: 0.16s;
+    }
+
+    .hero-dot {
+      color: var(--red);
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.22rem);
+      animation: fade-up 0.8s 0.35s both;
+    }
+
+    .hero-description strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+      animation: fade-up 0.8s 0.45s both;
+    }
+
+    .button {
+      min-height: 50px;
+      padding: 0 21px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 750;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #fff;
+      border-color: var(--red);
+      background: var(--red);
+    }
+
+    .button-primary:hover {
+      border-color: var(--red-light);
+      background: var(--red-light);
+    }
+
+    .button-secondary:hover {
+      color: #000;
+      border-color: #fff;
+      background: #fff;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      margin-top: 46px;
+      animation: fade-up 0.8s 0.55s both;
+    }
+
+    .hero-metric {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .hero-metric strong {
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-metric span {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    /* Terminal card */
+
+    .terminal {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(8, 8, 8, 0.84);
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(16px);
+      animation: fade-up 1s 0.4s both;
+    }
+
+    .terminal-bar {
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: #111;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .terminal-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #454545;
+    }
+
+    .terminal-dots span:first-child {
+      background: var(--red);
+    }
+
+    .terminal-title {
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.64rem;
+    }
+
+    .copy-button {
+      border: 0;
+      color: var(--muted);
+      background: transparent;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.63rem;
+      cursor: pointer;
+    }
+
+    .copy-button:hover {
+      color: #fff;
+    }
+
+    .terminal-body {
+      min-height: 300px;
+      max-height: 420px;
+      padding: 24px 24px 8px;
+      overflow-y: auto;
+      color: #bdbdbd;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: clamp(0.72rem, 1.1vw, 0.84rem);
+      line-height: 1.75;
+    }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: #2e2e2e;
+    }
+
+    .terminal-body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .terminal-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0 6px;
+    }
+
+    .terminal-command {
+      margin-bottom: 13px;
+      color: #fff;
+    }
+
+    .terminal-hint {
+      margin-top: 16px;
+      color: #7d7d7d;
+    }
+
+    .terminal-prompt,
+    .terminal-key {
+      color: #5ac8fa;
+    }
+
+    .terminal-separator {
+      /* Skill §12 — over translucent surfaces, avoid flat gray;
+         use a lighter, higher-contrast separator. */
+      color: #6e6e73;
+    }
+
+    .terminal-value {
+      color: #d6d6d6;
+    }
+
+    /* Interactive terminal input */
+
+    .terminal-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .terminal-input {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 16px;
+      border-top: 1px solid var(--border);
+      background: #0d0d0d;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.82rem;
+    }
+
+    .terminal-field {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: none;
+      color: #fff;
+      background: transparent;
+      font: inherit;
+    }
+
+    .terminal-field::placeholder {
+      color: #4c4c4c;
+    }
+
+    .terminal-submit {
+      padding: 5px 11px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: transparent;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .terminal-submit:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .terminal-error {
+      color: var(--red-light);
+    }
+
+    /* Technology ticker */
+
+    .ticker {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #090909;
+    }
+
+    .ticker-track {
+      width: max-content;
+      display: flex;
+      animation: marquee 34s linear infinite;
+    }
+
+    .ticker-group {
+      padding: 21px 27px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      color: #b9b9b9;
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ticker-item::after {
+      width: 5px;
+      height: 5px;
+      content: "";
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      align-items: end;
+      gap: clamp(50px, 9vw, 130px);
+    }
+
+    .about-copy {
+      margin-top: 50px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    }
+
+    .about-copy p + p {
+      margin-top: 23px;
+    }
+
+    .about-copy strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .profile-details {
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-row {
+      padding: 22px 0;
+      display: grid;
+      gap: 7px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row span {
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .detail-row strong {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Impact */
+
+    .impact {
+      background: var(--surface);
+    }
+
+    .impact-grid {
+      margin-top: 65px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .impact-card {
+      min-height: 235px;
+      padding: clamp(25px, 3vw, 40px);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .impact-card:hover {
+      z-index: 2;
+      background: #151515;
+      transform: translateY(-4px);
+    }
+
+    .impact-card strong {
+      display: block;
+      color: #fff;
+      /* Sized so the widest value ("99.5%") still fits its grid cell
+         without spilling into the neighbouring card. */
+      font-size: clamp(2rem, 3.6vw, 3.4rem);
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .impact-card strong em {
+      color: var(--red);
+      font-style: normal;
+    }
+
+    .impact-card p {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    /* Architecture pipeline */
+
+    .architecture-grid {
+      margin-top: 65px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: stretch;
+      gap: clamp(30px, 5vw, 70px);
+    }
+
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pipeline-node {
+      position: relative;
+      padding: 19px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .pipeline-node::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 3px;
+      height: 0;
+      content: "";
+      background: var(--red);
+      transform: translateY(-50%);
+      transition: height 0.25s ease;
+    }
+
+    .pipeline-node:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--text);
+      transform: translateX(4px);
+    }
+
+    .pipeline-node[aria-selected="true"] {
+      border-color: rgba(0, 113, 227, 0.55);
+      color: #fff;
+      background: rgba(0, 113, 227, 0.07);
+    }
+
+    .pipeline-node[aria-selected="true"]::before {
+      height: 60%;
+    }
+
+    .pipeline-step {
+      color: var(--red-light);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .pipeline-node[aria-selected="true"] .pipeline-step {
+      color: var(--red);
+    }
+
+    .pipeline-name {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .pipeline-detail {
+      padding: clamp(28px, 4vw, 46px);
+      border: 1px solid var(--border);
+      background: var(--surface-raised);
+    }
+
+    .pipeline-eyebrow {
+      color: var(--red-light);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .pipeline-detail h3 {
+      margin-top: 18px;
+      font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1.12;
+    }
+
+    .pipeline-detail > p {
+      max-width: 520px;
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .pipeline-metric {
+      margin-top: 30px;
+      padding-top: 26px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .pipeline-metric strong {
+      font-size: clamp(2rem, 3.6vw, 3rem);
+      font-weight: 650;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    .pipeline-metric span {
+      color: var(--muted);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .pipeline-detail .tags {
+      margin-top: 26px;
+    }
+
+    /* Skills explorer */
+
+    .skills-section {
+      background: var(--surface);
+    }
+
+    .skills-filters {
+      margin-top: 55px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-filter {
+      padding: 10px 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: transparent;
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .skill-filter:hover {
+      border-color: rgba(255, 255, 255, 0.32);
+      color: var(--text);
+    }
+
+    .skill-filter.is-active {
+      border-color: var(--red);
+      color: #fff;
+      background: var(--red);
+    }
+
+    .skills-grid {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: clamp(24px, 2.6vw, 32px);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      background: var(--surface-raised);
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    .skill-card:hover {
+      border-color: rgba(255, 255, 255, 0.24);
+      transform: translateY(-4px);
+    }
+
+    .skill-card h3 {
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .skill-card > p {
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .skill-outcomes {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .skill-outcomes li {
+      position: relative;
+      padding-left: 20px;
+      color: #c2c2c2;
+      font-size: 0.85rem;
+      line-height: 1.55;
+    }
+
+    /* The native list marker is recoloured to the accent colour
+       (see .skill-outcomes li::marker below) — no extra ::before
+       dot, so each item shows exactly one marker. */
+    .skill-outcomes li::before {
+      content: none;
+    }
+
+    .skill-card .tags {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .skill-card.is-hidden {
+      display: none;
+    }
+
+    /* Expertise */
+
+    .expertise-grid {
+      margin-top: 65px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .expertise-card {
+      position: relative;
+      min-height: 330px;
+      padding: clamp(28px, 4vw, 48px);
+      overflow: hidden;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .expertise-card::after {
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 220px;
+      height: 220px;
+      content: "";
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(0, 113, 227, 0.18),
+        transparent 70%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .expertise-card:hover {
+      z-index: 2;
+      background: #131313;
+      transform: translateY(-4px);
+    }
+
+    .expertise-card:hover::after {
+      opacity: 1;
+    }
+
+    .expertise-number {
+      color: var(--red-light);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .expertise-card h3 {
+      position: relative;
+      z-index: 2;
+      margin-top: 70px;
+      font-size: clamp(1.55rem, 2.7vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -0.05em;
+    }
+
+    .expertise-card p {
+      position: relative;
+      z-index: 2;
+      max-width: 490px;
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .tags {
+      position: relative;
+      z-index: 2;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      display: inline-flex;
+      border: 1px solid var(--border);
+      color: #c7c7c7;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Experience */
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: clamp(50px, 9vw, 130px);
+    }
+
+    .experience-intro p {
+      max-width: 450px;
+      margin-top: 27px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .timeline {
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-item {
+      padding: 40px 0;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-date {
+      color: var(--red-light);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .timeline-role {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .timeline-item h3 {
+      margin-top: 6px;
+      font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+    }
+
+    .timeline-item ul {
+      margin-top: 24px;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .timeline-item li {
+      padding-left: 5px;
+      margin-top: 12px;
+      font-size: 0.92rem;
+    }
+
+    .timeline-item li::marker {
+      color: var(--red);
+    }
+
+    .timeline-item li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .award {
+      margin-top: 24px;
+      padding: 15px 17px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid rgba(0, 113, 227, 0.42);
+      color: #cfe2ff;
+      background: rgba(0, 113, 227, 0.08);
+      font-size: 0.74rem;
+      font-weight: 650;
+    }
+
+    .award::before {
+      content: "◆";
+      color: var(--red);
+    }
+
+    /* Stack */
+
+    .stack {
+      background: var(--surface);
+    }
+
+    .stack-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(50px, 9vw, 130px);
+      align-items: start;
+    }
+
+    .stack-group {
+      padding-top: 22px;
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stack-group:first-of-type {
+      margin-top: 50px;
+    }
+
+    .stack-label {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .stack-group .tag {
+      margin: 0 6px 7px 0;
+    }
+
+    /* Contact */
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      color: #050505;
+      background: #f4f4f4;
+    }
+
+    .contact::before {
+      display: none;
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: end;
+      gap: clamp(50px, 9vw, 130px);
+    }
+
+    .contact .eyebrow {
+      color: #606060;
+    }
+
+    .contact-copy {
+      max-width: 620px;
+      margin-top: 29px;
+      color: #555;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+    }
+
+    .contact-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact .button-primary {
+      color: #fff;
+      border-color: #000;
+      background: #000;
+    }
+
+    .contact .button-primary:hover {
+      border-color: var(--red);
+      background: var(--red);
+    }
+
+    .contact .button-secondary {
+      border-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .contact .button-secondary:hover {
+      color: #fff;
+      border-color: #000;
+      background: #000;
+    }
+
+    .contact-links {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-link {
+      padding: 21px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 0.77rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-link span:last-child {
+      color: var(--red);
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .contact-link:hover span:last-child {
+      transform: translate(4px, -4px);
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 28px 0;
+      color: var(--muted);
+      background: var(--background);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-inner strong {
+      color: #fff;
+    }
+
+    /* =========================================================
+       Claude Code terminal aesthetic
+
+       Palette and UI language extracted from the Claude Code
+       binary itself (v2.1.303) rather than eyeballed:
+
+         #d77757  Anthropic brand terracotta (logo + chrome)
+         #ffaf5f  ANSI 38;5;215 — the running accent
+         #6c6c6c  ANSI 38;5;242 — dim secondary text
+         #0b0b0b  terminal background
+         #141414  panel background
+         #1a1a1a  raised surface
+         #e2e8f0  primary text
+         #9aa3ad  muted text
+         #334155  hairline borders
+         #475569  active borders
+
+       The look: a warm-terracotta accent on near-black, a
+       monospaced grid, left gutter rules like a diff, and
+       square-cornered panels — no pills, no blur, no glow.
+       ========================================================= */
+
+    :root {
+      /* Warm terracotta palette — matches exploreclaudecode.com's
+         token set exactly (warm charcoal, not cold blue-gray) */
+      --cc-orange: #c47a50;
+      --cc-orange-bright: #d48e66;
+      --cc-orange-dim: #9a5c3c;
+      --cc-accent-tint: rgba(196, 122, 80, 0.1);
+
+      --cc-bg: #0e0d0c;
+      --cc-panel: #141211;
+      --cc-raise: #1a1816;
+      --cc-raise-2: #22201d;
+      --cc-hover: #2a2825;
+      --cc-active: #33302c;
+
+      --cc-text: #b8b0a4;
+      --cc-dim: #847c72;
+      --cc-dimmer: #5c564f;
+      --cc-bright: #e6dfd6;
+
+      --cc-line: #272421;
+      --cc-border: #3a3632;
+      --cc-border-soft: #4d4841;
+
+      --cc-green: #6e9468;
+      --cc-amber: #c4a43e;
+      --cc-red: #c45b54;
+      --cc-blue: #5e82a0;
+      --cc-purple: #8e82ad;
+
+      /* Warm syntax palette from the reference site */
+      --cc-syn-number: #d4937a;
+      --cc-syn-string: #8aab7c;
+      --cc-syn-operator: #c4a86e;
+      --cc-syn-keyword: #7d9ab8;
+      --cc-syn-function: #c8b89a;
+      --cc-syn-variable: #c49a6e;
+
+      --cc-ui:
+        "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      --cc-mono:
+        "JetBrains Mono", "Fira Code", "Cascadia Code", "SFMono-Regular",
+        Menlo, Consolas, monospace;
+
+      --cc-radius: 4px;
+      --cc-radius-sm: 3px;
+      --cc-radius-xs: 2px;
+
+      /* Easing curves. These were lost when the Apple layer was
+         swapped for the Claude Code layer — every rule referencing
+         them silently fell back to `ease` with 0s duration. */
+      --ease-apple: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+      /* "Butter" — a symmetric ease-in-out with a long, soft settle.
+         Used for tree expansion so the motion feels unhurried. */
+      --ease-butter: cubic-bezier(0.65, 0, 0.35, 1);
+
+      --spring-ui: linear(0.0000, 0.0169, 0.0596, 0.1183, 0.1860, 0.2575, 0.3294, 0.3993, 0.4656, 0.5273, 0.5840, 0.6355, 0.6819, 0.7233, 0.7601, 0.7925, 0.8210, 0.8460, 0.8677, 0.8866, 0.9029, 0.9171, 0.9292, 0.9397, 0.9487, 0.9564, 0.9630, 0.9686, 0.9734, 0.9775, 0.9809, 0.9839, 0.9864, 0.9885, 0.9903, 0.9918, 0.9931, 0.9942, 0.9951, 0.9959, 1.0000);
+      --spring-duration: 0.44s;
+    }
+
+    body {
+      background: var(--cc-bg);
+      color: var(--cc-text);
+      font-family: var(--cc-ui);
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: 0;
+    }
+
+    ::selection {
+      color: #0b0b0b;
+      background: var(--cc-orange);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--cc-orange);
+      outline-offset: 2px;
+    }
+
+    /* Surfaces — flat, near-black, no glass */
+
+    .impact,
+    .skills-section,
+    .stack {
+      background: var(--cc-bg);
+    }
+
+    .site-header {
+      background: rgba(11, 11, 11, 0.92);
+      border-bottom-color: var(--cc-line);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      transition:
+        background 0.25s var(--ease-apple),
+        border-color 0.25s var(--ease-apple);
+    }
+
+    .site-header.scrolled {
+      background: rgba(11, 11, 11, 0.97);
+      border-bottom-color: var(--cc-border);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    /* The scroll-edge gradient reads as a terminal fade, not a blur */
+
+    .site-header::after {
+      position: absolute;
+      inset: 100% 0 auto;
+      height: 22px;
+      content: "";
+      background: linear-gradient(to bottom, rgba(11, 11, 11, 0.85), transparent);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s var(--ease-apple);
+    }
+
+    .site-header.scrolled::after {
+      opacity: 1;
+    }
+
+    /* Typography — the terminal voice
+       Casing follows the reference system exactly:
+         prose ............ sentence case
+         headings ......... sentence case (no forced transform)
+         eyebrows ......... UPPERCASE (mono, wide tracking)
+         machine ids ...... lowercase
+    */
+
+    /* Eyebrows use the reference site's "// comment" idiom
+       — a shell-comment prefix in accent colour, mono, and
+       forced uppercase like the site's section labels. */
+    .eyebrow {
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: auto;
+      content: "//";
+      color: var(--cc-orange);
+      background: none;
+    }
+
+    .section-title {
+      color: var(--cc-bright);
+      font-family: var(--cc-ui);
+      font-size: clamp(2rem, 4.2vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      text-transform: none;
+    }
+
+    .hero h1 {
+      color: var(--cc-bright);
+      font-family: var(--cc-ui);
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.02;
+      text-transform: none;
+    }
+
+    .section-title em {
+      color: var(--cc-orange);
+      font-style: normal;
+    }
+
+    .hero-dot {
+      color: var(--cc-orange);
+    }
+
+    .section-intro,
+    .hero-description,
+    .about-copy,
+    .contact-copy {
+      color: var(--cc-dim);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    /* Navigation — compact, monospaced, like a command bar */
+
+    .nav-links {
+      gap: clamp(12px, 1.6vw, 22px);
+    }
+
+    .nav-links a {
+      color: var(--cc-dim);
+      font-family: var(--cc-ui);
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      white-space: nowrap;
+      transition: color 0.2s var(--ease-apple);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      color: var(--cc-orange);
+    }
+
+    .nav-links a::after {
+      height: 1px;
+      border-radius: 0;
+      background: var(--cc-orange);
+      transition: transform 0.25s var(--ease-apple);
+    }
+
+    .brand {
+      font-family: var(--cc-mono);
+      font-weight: 600;
+      letter-spacing: 0;
+      font-size: 0.8rem;
+    }
+
+    /* macOS traffic lights — the reference app-shell signature */
+
+    .traffic-lights {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Real buttons, macOS style: the glyph appears on hover */
+    .traffic-light {
+      display: grid;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      opacity: 0.85;
+      cursor: pointer;
+      transition:
+        filter 0.15s var(--ease-apple),
+        opacity 0.15s var(--ease-apple);
+    }
+
+    .traffic-light:hover {
+      filter: brightness(1.2);
+      opacity: 1;
+    }
+
+    .traffic-light:focus-visible {
+      outline: 2px solid var(--cc-orange);
+      outline-offset: 2px;
+    }
+
+    .traffic-light::after {
+      content: "";
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1;
+      opacity: 0;
+      transition: opacity 0.1s var(--ease-apple);
+    }
+
+    .traffic-lights:hover .traffic-light::after,
+    .traffic-light:focus-visible::after {
+      opacity: 1;
+    }
+
+    .traffic-light--close {
+      background: #c45b54;
+    }
+
+    .traffic-light--close::after {
+      content: "\00d7";
+      font-size: 10px;
+    }
+
+    .traffic-light--minimize {
+      background: #c4a43e;
+    }
+
+    .traffic-light--minimize::after {
+      content: "\2013";
+      font-size: 9px;
+      margin-top: -1px;
+    }
+
+    .traffic-light--maximize {
+      background: #5eab5e;
+    }
+
+    .traffic-light--maximize::after {
+      content: "\2922";
+      font-size: 7px;
+    }
+
+    .brand-mark {
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-orange);
+      color: var(--cc-orange);
+      background: rgba(215, 119, 87, 0.08);
+    }
+
+    .brand-name span {
+      color: var(--cc-dimmer);
+    }
+
+    .nav-cta {
+      padding: 8px 14px;
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-border);
+      color: var(--cc-text);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.73rem;
+      transition:
+        background 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple),
+        color 0.2s var(--ease-apple);
+    }
+
+    .nav-cta:hover {
+      border-color: var(--cc-orange);
+      color: var(--cc-orange);
+      background: rgba(215, 119, 87, 0.08);
+      transform: none;
+    }
+
+    /* Buttons — square corners, terminal-style */
+
+    .button {
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: var(--cc-radius);
+      font-family: var(--cc-ui);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.9rem;
+      transition:
+        transform var(--spring-duration) var(--spring-ui),
+        background 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple),
+        color 0.2s var(--ease-apple),
+        box-shadow 0.2s var(--ease-apple);
+    }
+
+    .button:hover {
+      transform: none;
+    }
+
+    .button-primary {
+      color: #0b0b0b;
+      border-color: var(--cc-orange);
+      background: var(--cc-orange);
+    }
+
+    .button-primary:hover {
+      border-color: var(--cc-orange-bright);
+      background: var(--cc-orange-bright);
+      box-shadow: none;
+    }
+
+    .button-secondary {
+      color: var(--cc-text);
+      border-color: var(--cc-border);
+    }
+
+    .button-secondary:hover {
+      color: var(--cc-orange);
+      border-color: var(--cc-orange);
+      background: transparent;
+      transform: none;
+    }
+
+    /* Cards — flat panels, hairline borders, no radius, no shadow */
+
+    .impact-card,
+    .expertise-card,
+    .skill-card,
+    .pipeline-detail {
+      border-radius: var(--cc-radius);
+      border-color: var(--cc-line);
+      background: var(--cc-panel);
+      box-shadow: none;
+      transition:
+        transform 0.25s var(--ease-apple),
+        border-color 0.2s var(--ease-apple),
+        background 0.2s var(--ease-apple);
+    }
+
+    .impact-card:hover,
+    .expertise-card:hover,
+    .skill-card:hover {
+      transform: none;
+      border-color: var(--cc-orange-dim);
+      background: var(--cc-raise);
+      box-shadow: none;
+    }
+
+    /* Tags and filters — square chips */
+
+    /* Badges render lowercase in the reference system — but
+       that rule would corrupt technical acronyms (MCP → mcp,
+       CI/CD → ci/cd, C# → c#). The literal source text is
+       already lowercase for prose badges, so no transform is
+       needed here; acronyms keep their intended casing. */
+    .tag {
+      padding: 2px 8px;
+      border-radius: var(--cc-radius-xs);
+      border-color: var(--cc-line);
+      color: var(--cc-dim);
+      background: var(--cc-accent-tint);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      font-size: 0.64rem;
+      transition:
+        color 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple);
+    }
+
+    .skill-filter {
+      padding: 6px 13px;
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-line);
+      color: var(--cc-dim);
+      font-family: var(--cc-ui);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.84rem;
+      transition:
+        color 0.2s var(--ease-apple),
+        background 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple);
+    }
+
+    .skill-filter:hover {
+      border-color: var(--cc-border-soft);
+      color: var(--cc-text);
+      transform: none;
+    }
+
+    .skill-filter.is-active {
+      border-color: var(--cc-orange);
+      color: #0b0b0b;
+      background: var(--cc-orange);
+    }
+
+    /* Pipeline — a vertical rail, like a diff gutter */
+
+    .pipeline-node {
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-line);
+      background: var(--cc-panel);
+      transition:
+        color 0.2s var(--ease-apple),
+        background 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple),
+        transform 0.2s var(--ease-apple);
+    }
+
+    .pipeline-node::before {
+      width: 2px;
+      border-radius: 0;
+      background: var(--cc-orange);
+      transition: height 0.25s var(--ease-out-soft);
+    }
+
+    .pipeline-node:hover {
+      border-color: var(--cc-border-soft);
+      transform: none;
+    }
+
+    .pipeline-node[aria-selected="true"] {
+      border-color: var(--cc-orange-dim);
+      background: rgba(215, 119, 87, 0.07);
+    }
+
+    .pipeline-step,
+    .pipeline-eyebrow {
+      color: var(--cc-orange);
+      font-family: var(--cc-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    /* Peer index label — was still on the base SFMono stack */
+    .expertise-number {
+      color: var(--cc-orange);
+      font-family: var(--cc-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Same specificity as the base rule it overrides */
+    .pipeline-node[aria-selected="true"] .pipeline-step {
+      color: var(--cc-orange);
+    }
+
+    .pipeline-name {
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Terminal — the centerpiece */
+
+    .terminal {
+      border-radius: var(--cc-radius);
+      border-color: var(--cc-border);
+      background: var(--cc-panel);
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    /* The reference's terminal header is a mono label, forced
+       uppercase, with a status dot — not a row of window dots. */
+    .terminal-bar {
+      padding: 9px 14px;
+      border-bottom-color: var(--cc-line);
+      background: var(--cc-raise);
+    }
+
+    .terminal-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .terminal-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cc-border-soft);
+    }
+
+    .terminal-dots span:first-child {
+      background: var(--cc-orange);
+      box-shadow: 0 0 6px rgba(196, 122, 80, 0.5);
+    }
+
+    .terminal-title {
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Claude Code's path › branch title bar */
+    .terminal-title-prompt {
+      color: var(--cc-orange);
+    }
+
+    .terminal-title-sep {
+      color: var(--cc-border-soft);
+    }
+
+    .terminal-title-branch {
+      color: var(--cc-dim);
+    }
+
+    .terminal-body {
+      color: var(--cc-dim);
+      font-family: var(--cc-mono);
+      font-size: 0.78rem;
+      line-height: 1.85;
+      background: var(--cc-bg);
+    }
+
+    .terminal-prompt,
+    .terminal-key {
+      color: var(--cc-orange-bright);
+    }
+
+    .terminal-separator {
+      color: #4b5563;
+    }
+
+    .terminal-value {
+      color: var(--cc-text);
+    }
+
+    .terminal-command {
+      color: var(--cc-text);
+    }
+
+    .terminal-hint {
+      color: var(--cc-dimmer);
+    }
+
+    .copy-button {
+      padding: 3px 9px;
+      border-radius: var(--cc-radius-sm);
+      border: 1px solid var(--cc-line);
+      color: var(--cc-dim);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.66rem;
+      white-space: nowrap;
+      transition:
+        color 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple),
+        background 0.2s var(--ease-apple);
+    }
+
+    .copy-button:hover {
+      color: var(--cc-orange);
+      border-color: var(--cc-orange-dim);
+      background: rgba(215, 119, 87, 0.08);
+    }
+
+    .terminal-input {
+      border-top-color: var(--cc-line);
+      background: var(--cc-panel);
+      font-family: var(--cc-mono);
+    }
+
+    .terminal-field {
+      color: var(--cc-text);
+      font-family: var(--cc-mono);
+    }
+
+    .terminal-field::placeholder {
+      color: #4b5563;
+    }
+
+    .terminal-submit {
+      padding: 4px 11px;
+      border-radius: var(--cc-radius-sm);
+      border: 1px solid var(--cc-line);
+      color: var(--cc-dim);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.66rem;
+      transition:
+        color 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple);
+    }
+
+    .terminal-submit:hover {
+      border-color: var(--cc-orange-dim);
+      color: var(--cc-orange);
+    }
+
+    /* Status line — Claude Code's footer readout */
+    .terminal-status {
+      padding: 8px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      border-top: 1px solid var(--cc-line);
+      background: #0f0f0f;
+      font-family: var(--cc-mono);
+      font-size: 0.66rem;
+    }
+
+    .terminal-status-item {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .terminal-status-key {
+      color: var(--cc-dimmer);
+    }
+
+    .terminal-status-val {
+      color: var(--cc-dim);
+    }
+
+    .terminal-error {
+      color: var(--cc-red);
+    }
+
+    /* Accents */
+
+    .availability-dot {
+      background: var(--cc-orange);
+      box-shadow: 0 0 10px rgba(215, 119, 87, 0.55);
+    }
+
+    /* Claude Code's ⏺ bullet — the running marker */
+    .availability-glyph {
+      color: var(--cc-orange);
+      font-size: 0.62rem;
+      line-height: 1;
+    }
+
+    .availability-dot::after {
+      border-color: var(--cc-orange);
+    }
+
+    .impact-card strong em,
+    .expertise-number,
+    .timeline-date,
+    .skill-outcomes li::marker,
+    .contact-link span:last-child,
+    .ticker-item::after,
+    .timeline-item li::marker {
+      color: var(--cc-orange);
+    }
+
+    .impact-card strong {
+      color: var(--cc-text);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-metric strong,
+    .pipeline-metric strong {
+      color: var(--cc-text);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    /* Availability and small labels */
+
+    .availability {
+      color: var(--cc-dim);
+      font-family: var(--cc-mono);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .detail-row span,
+    .stack-label {
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
+    .timeline-date {
+      font-family: var(--cc-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .hero-metric span,
+    .pipeline-metric span {
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
+    .timeline-role {
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.75rem;
+    }
+
+    /* Award badge */
+
+    .award {
+      padding: 6px 12px;
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-orange-dim);
+      color: var(--cc-orange-bright);
+      background: rgba(215, 119, 87, 0.08);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      font-size: 0.74rem;
+    }
+
+    .award::before {
+      content: "◆";
+      color: var(--cc-orange);
+    }
+
+
+
+    /* Contact — stays dark, like the rest of the terminal */
+
+    .contact {
+      background: var(--cc-panel);
+      color: var(--cc-text);
+    }
+
+    .contact .eyebrow {
+      color: var(--cc-dim);
+    }
+
+    .contact .eyebrow::before {
+      background: var(--cc-orange);
+    }
+
+    .contact .section-title {
+      color: var(--cc-text);
+    }
+
+    .contact .section-title em {
+      color: var(--cc-orange);
+    }
+
+    .contact-copy {
+      color: var(--cc-dim);
+    }
+
+    .contact .button-primary {
+      color: #0b0b0b;
+      border-color: var(--cc-orange);
+      background: var(--cc-orange);
+    }
+
+    .contact .button-primary:hover {
+      border-color: var(--cc-orange-bright);
+      background: var(--cc-orange-bright);
+      box-shadow: none;
+    }
+
+    .contact .button-secondary {
+      border-color: var(--cc-border);
+      color: var(--cc-text);
+    }
+
+    .contact .button-secondary:hover {
+      color: #0b0b0b;
+      border-color: var(--cc-orange);
+      background: var(--cc-orange);
+    }
+
+    .contact-links {
+      border-top-color: var(--cc-line);
+    }
+
+    .contact-link {
+      padding: 16px 0;
+      border-bottom-color: var(--cc-line);
+      color: var(--cc-text);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.78rem;
+    }
+
+    .contact-link span:last-child {
+      color: var(--cc-orange);
+    }
+
+    /* Menu toggle — square */
+
+    .menu-toggle {
+      border-radius: var(--cc-radius-sm);
+      border-color: var(--cc-border);
+    }
+
+    .menu-toggle[aria-expanded="true"] {
+      border-color: var(--cc-orange);
+    }
+
+    /* Mobile nav overlay — flat, not blurred.
+       NOTE: the overlay sizing lives in the max-width:800px
+       media query. These rules only set the surface, so the
+       desktop nav is not affected by them. */
+
+    .nav-links {
+      background: rgba(14, 13, 12, 0.985);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    /* Ticker */
+
+    .ticker {
+      background: var(--cc-bg);
+      border-top-color: var(--cc-line);
+      border-bottom-color: var(--cc-line);
+    }
+
+    .ticker-item {
+      color: var(--cc-dim);
+      font-family: var(--cc-mono);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: none;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: var(--cc-bg);
+      color: var(--cc-dimmer);
+      border-top: 1px solid var(--cc-line);
+    }
+
+    .footer-inner strong {
+      color: var(--cc-text);
+    }
+
+    /* Press feedback — square, no scale, just a color shift */
+
+    .button:active,
+    .nav-cta:active,
+    .skill-filter:active,
+    .copy-button:active,
+    .terminal-submit:active,
+    .menu-toggle:active {
+      transform: none;
+      transition: none;
+    }
+
+    .button-primary:active {
+      background: var(--cc-orange-bright);
+      border-color: var(--cc-orange-bright);
+    }
+
+    .skill-filter.is-active:active {
+      background: var(--cc-orange-bright);
+    }
+
+    /* Scroll reveal */
+
+    .js [data-reveal] {
+      transform: translateY(14px);
+      transition:
+        opacity var(--spring-duration) var(--spring-ui) var(--delay, 0s),
+        transform var(--spring-duration) var(--spring-ui) var(--delay, 0s);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.5;
+        transform: scale(0.7);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+    }
+
+    /* Responsive */
+
+    @media (max-width: 1000px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .terminal {
+        width: min(100%, 520px);
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-grid,
+      .experience-layout {
+        gap: 60px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      :root {
+        --header-height: 72px;
+      }
+
+      .container,
+      .nav-shell {
+        width: min(calc(100% - 32px), var(--container));
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        padding: 110px 32px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        background: rgba(11, 11, 11, 0.985);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition:
+          opacity 0.3s var(--ease-apple),
+          transform 0.3s var(--ease-out-soft);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        font-family: var(--cc-mono);
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.6rem, 11vw, 4.4rem);
+      }
+
+      .about-grid,
+      .experience-layout,
+      .stack-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .architecture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 580px) {
+      .brand-name span {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 12vw, 3.4rem);
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-metrics {
+        gap: 20px;
+      }
+
+      .hero-metric {
+        width: 100%;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pipeline-node {
+        padding: 14px 16px;
+      }
+
+      .impact-card {
+        min-height: 190px;
+      }
+
+      .expertise-card {
+        min-height: 300px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .terminal-body {
+        padding: 20px 16px;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 9vw, 2.9rem);
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* Accessibility — same three signals, Claude Code palette */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .js [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
+
+      .button,
+      .nav-cta,
+      .skill-filter,
+      .copy-button,
+      .terminal-submit,
+      .impact-card,
+      .expertise-card,
+      .skill-card,
+      .pipeline-node {
+        transition:
+          opacity 200ms ease,
+          color 200ms ease,
+          background 200ms ease,
+          border-color 200ms ease !important;
+        transform: none !important;
+      }
+
+      .availability-dot::after {
+        animation: none;
+        opacity: 0.4;
+      }
+    }
+
+    @media (prefers-reduced-transparency: reduce) {
+      .site-header,
+      .site-header.scrolled,
+      .nav-links {
+        background: #0b0b0b;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+    }
+
+    @media (prefers-contrast: more) {
+      :root {
+        --cc-text: #ffffff;
+        --cc-dim: #d4d4d8;
+        --cc-dimmer: #a1a1a6;
+        --cc-line: rgba(226, 232, 240, 0.35);
+        --cc-border: #64748b;
+      }
+
+      .impact-card,
+      .expertise-card,
+      .skill-card,
+      .pipeline-detail,
+      .pipeline-node,
+      .terminal {
+        border-color: var(--cc-border);
+        background: #101010;
+      }
+    }
+    /* =========================================================
+       IDE app shell — the whole page is one application window.
+
+       Structure mirrors exploreclaudecode.com:
+         .app-shell        the bordered, rounded window
+         .title-bar        macOS-style bar with traffic lights
+         .main-layout      sidebar | content | terminal panel
+         .status-bar       VS Code-style footer readout
+       ========================================================= */
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: var(--cc-bg);
+    }
+
+    .app-shell {
+      display: flex;
+      flex-direction: column;
+      /* height minus the 6px margin on each side, so the window
+         never overflows the viewport */
+      height: calc(100vh - 12px);
+      height: calc(100dvh - 12px);
+      margin: 6px;
+      overflow: hidden;
+      border: 1px solid var(--cc-border);
+      border-radius: var(--cc-radius);
+      background: var(--cc-raise);
+    }
+
+    /* Screen-reader-only text — keeps the h1 meaningful for search
+       engines and assistive tech without changing the visual design. */
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* No-JS notice */
+
+    .noscript-note {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--cc-line);
+      color: var(--cc-dim);
+      background: var(--cc-panel);
+      font-family: var(--cc-mono);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    /* Window control states */
+
+    .app-shell {
+      transition:
+        height 0.4s var(--ease-butter),
+        opacity 0.3s var(--ease-apple),
+        transform 0.4s var(--ease-butter);
+    }
+
+    .app-shell.is-minimized {
+      height: 40px;
+    }
+
+    .app-shell.is-minimized .main-layout,
+    .app-shell.is-minimized .status-bar {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .app-shell.is-closed {
+      height: 40px;
+      opacity: 0.4;
+    }
+
+    .app-shell.is-closed .main-layout,
+    .app-shell.is-closed .status-bar {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Title bar */
+
+    .title-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 40px;
+      padding: 0 14px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cc-line);
+      background: var(--cc-raise-2);
+    }
+
+    .title-bar__text {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: var(--cc-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+      color: var(--cc-dimmer);
+    }
+
+    .title-bar__text b {
+      color: var(--cc-dim);
+      font-weight: 500;
+    }
+
+    .title-bar__actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .titlebar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border: 1px solid var(--cc-line);
+      border-radius: var(--cc-radius-xs);
+      color: var(--cc-dim);
+      background: transparent;
+      font-family: var(--cc-mono);
+      font-size: 0.65rem;
+      cursor: pointer;
+      transition:
+        color 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple);
+    }
+
+    .titlebar-btn:hover {
+      border-color: var(--cc-border-soft);
+      color: var(--cc-bright);
+    }
+
+    .titlebar-btn__hint {
+      padding: 1px 5px;
+      border: 1px solid var(--cc-border);
+      border-radius: var(--cc-radius-xs);
+      color: var(--cc-dimmer);
+      font-size: 0.6rem;
+    }
+
+    /* Main layout */
+
+    .main-layout {
+      display: flex;
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* Sidebar — the file tree */
+
+    .sidebar {
+      width: 230px;
+      min-width: 230px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-right: 1px solid var(--cc-line);
+      background: var(--cc-raise);
+    }
+
+    .sidebar__header {
+      padding: 9px 14px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cc-line);
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sidebar__tree {
+      flex: 1;
+      padding: 6px 0 14px;
+      overflow-y: auto;
+    }
+
+    /* Tree — mirrors the reference site's file explorer:
+       folder icons that swap open/closed, 16px indent steps,
+       hairline connectors drawn on a canvas, and a staggered
+       per-item reveal. */
+
+    .tree-item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 26px;
+      padding: 0 14px;
+      border-left: 2px solid transparent;
+      color: var(--cc-text);
+      font-family: var(--cc-mono);
+      font-size: 0.76rem;
+      white-space: nowrap;
+      cursor: pointer;
+      transition:
+        background 0.08s var(--ease-apple),
+        color 0.08s var(--ease-apple);
+    }
+
+    .tree-item:hover {
+      color: var(--cc-bright);
+      background: var(--cc-hover);
+    }
+
+    .tree-item.is-active {
+      border-left-color: var(--cc-orange);
+      color: var(--cc-bright);
+      background: var(--cc-accent-tint);
+      padding-left: 12px;
+    }
+
+    .tree-icon {
+      display: flex;
+      flex-shrink: 0;
+      color: var(--cc-dim);
+    }
+
+    .tree-item-dir .tree-icon {
+      color: var(--cc-dim);
+    }
+
+    .tree-item-file .tree-icon {
+      opacity: 0.6;
+    }
+
+    .tree-item.is-active .tree-icon {
+      opacity: 1;
+      color: var(--cc-orange);
+    }
+
+    .tree-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tree-dir {
+      position: relative;
+    }
+
+    /* The children container is hidden by default; the .expanded
+       class plus an inline max-height drives the animation. */
+    .tree-children {
+      display: none;
+      overflow: hidden;
+    }
+
+    .tree-children.expanded {
+      display: block;
+    }
+
+    .tree-children-guided {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    /* Connector lines are drawn on a canvas that sits behind the rows */
+    .tree-guide-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Staggered item reveal */
+    .tree-children-guided > .tree-item,
+    .tree-children-guided > .tree-dir {
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .tree-children-guided > .tree-item.tree-visible,
+    .tree-children-guided > .tree-dir.tree-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tree-item__glyph {
+      width: 12px;
+      flex-shrink: 0;
+      color: var(--cc-dimmer);
+      font-size: 0.7rem;
+      text-align: center;
+    }
+
+    .tree-item.is-active .tree-item__glyph {
+      color: var(--cc-orange);
+    }
+
+    .tree-item__label {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar__group {
+      margin-top: 14px;
+      padding: 6px 14px 4px;
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Content area */
+
+    .content-area {
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--cc-bg);
+    }
+
+    .tab-bar {
+      display: flex;
+      align-items: stretch;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      min-height: 36px;
+      max-height: 110px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: var(--cc-border) transparent;
+      border-bottom: 1px solid var(--cc-line);
+      background: var(--cc-panel);
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .tab-bar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .tab-bar::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: var(--cc-border);
+    }
+
+    .tab {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      /* A wrapping flex row will squash items to fit; pin the height
+         so the label and close button never collapse. */
+      height: 35px;
+      min-height: 35px;
+      flex: 0 0 auto;
+      border: 0;
+      border-right: 1px solid var(--cc-line);
+      border-top: 1px solid transparent;
+      color: var(--cc-dim);
+      background: transparent;
+      font-family: var(--cc-mono);
+      font-size: 0.75rem;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      transition:
+        color 0.25s var(--ease-apple),
+        background 0.25s var(--ease-apple);
+    }
+
+    .tab.is-active {
+      border-top-color: var(--cc-orange);
+      color: var(--cc-bright);
+      background: var(--cc-bg);
+    }
+
+    .tab:hover:not(.is-active) {
+      color: var(--cc-bright);
+      background: var(--cc-hover);
+    }
+
+    .tab__dot {
+      width: 6px;
+      height: 6px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--cc-orange);
+      box-shadow: 0 0 6px rgba(196, 122, 80, 0.5);
+    }
+
+    .tab__label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tab__close {
+      display: grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      margin-left: 2px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      color: var(--cc-dimmer);
+      font-size: 0.85rem;
+      line-height: 1;
+      cursor: pointer;
+      transition:
+        color 0.2s var(--ease-apple),
+        background 0.2s var(--ease-apple);
+    }
+
+    .tab__close:hover {
+      color: #fff;
+      background: var(--cc-active);
+    }
+
+    /* Tabs animate in from the right, and collapse when closed */
+    .tab.is-entering {
+      animation: tab-in 0.42s var(--ease-out-soft) both;
+    }
+
+    .tab.is-leaving {
+      animation: tab-out 0.28s var(--ease-apple) both;
+      pointer-events: none;
+    }
+
+    @keyframes tab-in {
+      from {
+        opacity: 0;
+        transform: translateX(18px) scaleX(0.86);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+      }
+    }
+
+    @keyframes tab-out {
+      from {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(14px) scaleX(0.9);
+      }
+    }
+
+    .content-scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    /* Terminal panel */
+
+    .terminal-panel {
+      width: 330px;
+      min-width: 330px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      flex-shrink: 0;
+      border-left: 1px solid var(--cc-border);
+      background: var(--cc-panel);
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cc-line);
+      color: var(--cc-dimmer);
+      font-family: var(--cc-mono);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* The terminal panel's own header is redundant now that the
+       card carries the wordmark — hide it. */
+    .terminal-panel > .terminal-header {
+      display: none;
+    }
+
+    /* Branded terminal header — rules flanking a two-tone wordmark.
+       Left-aligned, matching the reference site's terminal banner. */
+
+    .term-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 16px 18px 14px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cc-line);
+      background: var(--cc-panel);
+    }
+
+    .term-brand__rule {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        var(--cc-orange) 0%,
+        transparent 100%
+      );
+      opacity: 0.3;
+    }
+
+    .term-brand__title {
+      margin: 14px 0 0;
+      font-family: var(--cc-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .term-brand__meta {
+      margin: 5px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--cc-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+    }
+
+    .term-brand__char-bright {
+      color: var(--cc-bright);
+    }
+
+    .term-brand__char-accent {
+      color: var(--cc-orange);
+      opacity: 0.85;
+    }
+
+    .term-brand__char-dim {
+      color: var(--cc-dimmer);
+    }
+
+
+    .terminal-header__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cc-orange);
+      box-shadow: 0 0 6px rgba(196, 122, 80, 0.5);
+    }
+
+    .terminal-panel .terminal-body {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    /* Status bar */
+
+    .status-bar {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 4px 14px;
+      flex-shrink: 0;
+      border-top: 1px solid var(--cc-line);
+      color: var(--cc-dim);
+      background: var(--cc-raise-2);
+      font-family: var(--cc-mono);
+      font-size: 0.68rem;
+    }
+
+    .status-bar__item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .status-bar__key {
+      color: var(--cc-dimmer);
+    }
+
+    .status-bar__val {
+      color: var(--cc-dim);
+    }
+
+    .status-bar__spacer {
+      flex: 1;
+    }
+
+    .status-bar__item--accent .status-bar__val {
+      color: var(--cc-orange);
+    }
+
+    /* Scrollbars — thin, matching the reference */
+
+    .content-scroll::-webkit-scrollbar,
+    .sidebar__tree::-webkit-scrollbar,
+    .terminal-panel .terminal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .content-scroll::-webkit-scrollbar-track,
+    .sidebar__tree::-webkit-scrollbar-track,
+    .terminal-panel .terminal-body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .content-scroll::-webkit-scrollbar-thumb,
+    .sidebar__tree::-webkit-scrollbar-thumb,
+    .terminal-panel .terminal-body::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: var(--cc-border);
+    }
+
+    /* The old fixed header becomes the title bar, so it must not
+       float above the content any more. */
+
+    .site-header {
+      position: static;
+      inset: auto;
+      height: auto;
+      border-bottom: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .site-header::after {
+      display: none;
+    }
+
+    .nav-shell {
+      width: 100%;
+      height: auto;
+      display: contents;
+    }
+
+    .brand,
+    .nav-links,
+    .nav-cta {
+      display: none;
+    }
+
+    /* The hero no longer owns the viewport */
+
+    .hero {
+      min-height: auto;
+      padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 5vw, 72px);
+    }
+
+    .hero::after {
+      opacity: 0.5;
+    }
+
+    /* Sections scroll inside the panel, so no header offset needed */
+
+    .section {
+      scroll-margin-top: 0;
+    }
+
+    .ticker {
+      border-top-color: var(--cc-line);
+      border-bottom-color: var(--cc-line);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--cc-line);
+    }
+
+    /* Mobile: sidebar becomes an off-canvas drawer */
+
+    @media (max-width: 1100px) {
+      .terminal-panel {
+        width: 290px;
+        min-width: 290px;
+      }
+
+      .sidebar {
+        width: 200px;
+        min-width: 200px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .terminal-panel {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .app-shell {
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        z-index: 200;
+        width: 250px;
+        min-width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.28s var(--ease-out-soft);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .sidebar.is-open {
+        transform: translateX(0);
+      }
+
+      .sidebar-backdrop {
+        position: fixed;
+        inset: 40px 0 0;
+        z-index: 199;
+        background: rgba(14, 13, 12, 0.6);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s var(--ease-apple);
+      }
+
+      .sidebar-backdrop.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .menu-toggle {
+        display: grid;
+        position: static;
+        width: 34px;
+        height: 26px;
+        place-items: center;
+        flex-shrink: 0;
+        border-radius: var(--cc-radius-xs);
+      }
+
+      .menu-toggle span {
+        margin: 3px auto;
+        background: var(--cc-dim);
+      }
+
+      .content-scroll {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <noscript>
+    <div class="noscript-note">
+      This page uses JavaScript for the interactive terminal and file tree.
+      The rest of the content below works without it.
+    </div>
+  </noscript>
+
+  <div class="app-shell">
+    <!-- Title bar -->
+    <header class="site-header title-bar" id="site-header">
+      <div class="traffic-lights">
+        <button
+          class="traffic-light traffic-light--close"
+          type="button"
+          aria-label="Close"
+          data-window-action="close"
+        ></button>
+        <button
+          class="traffic-light traffic-light--minimize"
+          type="button"
+          aria-label="Minimize"
+          data-window-action="minimize"
+        ></button>
+        <button
+          class="traffic-light traffic-light--maximize"
+          type="button"
+          aria-label="Maximize"
+          data-window-action="maximize"
+        ></button>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <span class="title-bar__text">
+        <b>ragul@career</b>
+      </span>
+
+      <div class="title-bar__actions">
+        <a
+          class="titlebar-btn"
+          href="https://www.linkedin.com/in/ragul-murugan-9a2205123/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <!-- Sidebar: section tree -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">Resume</div>
+
+        <nav class="sidebar__tree" id="primary-nav" aria-label="Primary navigation">
+          <a class="tree-item tree-item-file" href="#home" data-section="home">
+            <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M6 2.5h4l.5 2H13v9H3v-9h2.5l.5-2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+            <span class="tree-label">Welcome</span>
+          </a>
+
+          <div class="tree-dir" data-path="about">
+            <div class="tree-item tree-item-dir" data-section="about" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">about.md</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="about" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Profile</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="about" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Details</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="impact">
+            <div class="tree-item tree-item-dir" data-section="impact" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">impact.json</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="impact" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Metrics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="architecture">
+            <div class="tree-item tree-item-dir" data-section="architecture" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">architecture.ts</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="architecture" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Pipeline</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="architecture" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Detail</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="expertise">
+            <div class="tree-item tree-item-dir" data-section="expertise" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">expertise.md</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="expertise" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Cloud</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="expertise" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">AI & Data</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="expertise" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Security</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="expertise" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Delivery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="skills">
+            <div class="tree-item tree-item-dir" data-section="skills" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">skills.json</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="skills" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Domains</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="experience">
+            <div class="tree-item tree-item-dir" data-section="experience" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">experience.log</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="experience" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Xerox</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="experience" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">UST</span>
+                </div>
+                <div class="tree-item tree-item-file" data-section="experience" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Wipro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="stack">
+            <div class="tree-item tree-item-dir" data-section="stack" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">stack.json</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="stack" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Technology</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-dir" data-path="contact">
+            <div class="tree-item tree-item-dir" data-section="contact" role="button" tabindex="0" aria-expanded="false">
+              <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="tree-label">contact.md</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-children-guided" data-depth="0">
+                <div class="tree-item tree-item-file" data-section="contact" data-child="1">
+                  <span class="tree-icon tree-icon--svg" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 2.5h5l1 1H13v10H4v-11z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  <span class="tree-label">Links</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <!-- Content -->
+      <main class="content-area" id="main">
+        <div class="tab-bar" id="tab-bar" role="tablist">
+          <div class="tab is-active" role="tab" data-tab="home" tabindex="0">
+            <span class="tab__dot" aria-hidden="true"></span>
+            <span class="tab__label">Welcome</span>
+          </div>
+        </div>
+
+        <div class="content-scroll" id="content">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span class="availability-glyph" aria-hidden="true">⏺</span>
+            Senior Software Engineer at Xerox
+          </p>
+
+          <h1 id="hero">
+            <span class="visually-hidden"
+              >Ragul Murugan — Senior Software Engineer, AI and cloud
+              systems</span
+            >
+            <span class="hero-line" aria-hidden="true">Engineering</span>
+            <span class="hero-line" aria-hidden="true">intelligent</span>
+            <span class="hero-line" aria-hidden="true"
+              >systems<span class="hero-dot">.</span></span
+            >
+          </h1>
+
+          <p class="hero-description">
+            I’m <strong>Ragul Murugan</strong>, a Senior Software Engineer with
+            <strong>7+ years of experience</strong> building cloud platforms,
+            secure integrations, modern applications, and AI-powered document
+            systems.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">
+              Explore experience
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://www.linkedin.com/in/ragul-murugan-9a2205123/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <div class="hero-metrics" aria-label="Career highlights">
+            <div class="hero-metric">
+              <strong>7+</strong>
+              <span>Years building</span>
+            </div>
+
+            <div class="hero-metric">
+              <strong>1M+</strong>
+              <span>Documents searchable</span>
+            </div>
+
+            <div class="hero-metric">
+              <strong>79%</strong>
+              <span>Faster CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div data-reveal>
+
+          <h2 class="section-title" id="about-heading">
+            From cloud integration to
+            <em>AI-powered platforms.</em>
+          </h2>
+
+          <div class="about-copy">
+            <p>
+              I’m a Senior Software Engineer at <strong>Xerox</strong>,
+              contributing to intelligent enhancements for the
+              <strong>DocuShare</strong> platform. My work combines cloud
+              architecture, backend engineering, document intelligence, and
+              secure product delivery.
+            </p>
+
+            <p>
+              Across Wipro, UST, and Xerox, I’ve developed a practical
+              engineering approach: understand the complete system, secure the
+              critical paths, automate delivery, and build software that can be
+              operated in production.
+            </p>
+
+            <p>
+              These efforts have contributed to multiple industry accolades
+              for innovation and performance, while also earning recognition
+              for high-impact engineering execution.
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-details" data-reveal style="--delay: 0.12s">
+          <div class="detail-row">
+            <span>Current role</span>
+            <strong>Senior Software Engineer · Xerox</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Experience</span>
+            <strong>7+ years across cloud and software engineering</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Education</span>
+            <strong>
+              Bachelor of Engineering in Computer Science and Engineering
+            </strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Institution</span>
+            <strong>Jeppiaar Institute of Technology</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>University</span>
+            <strong>Anna University, Chennai</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>Current focus</span>
+            <strong>LLMs, agentic AI, and intelligent document systems</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section impact" id="impact" aria-labelledby="impact-heading">
+      <div class="container">
+        <div data-reveal>
+          <h2 class="section-title" id="impact-heading">
+            Engineering measurable
+            <em>business outcomes.</em>
+          </h2>
+          <p class="section-intro">
+            Production systems built around scale, intelligence, secure access,
+            and reliable delivery.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card" data-reveal>
+            <strong>1M<em>+</em></strong>
+            <p>
+              Enterprise documents made intelligently searchable through
+              Azure OpenAI embeddings and PostgreSQL pgvector.
+            </p>
+          </article>
+
+          <article class="impact-card" data-reveal style="--delay: 0.08s">
+            <strong>79<em>%</em></strong>
+            <p>
+              CI/CD pipeline time reduced from two hours to 25 minutes through
+              Azure DevOps parallelization.
+            </p>
+          </article>
+
+          <article class="impact-card" data-reveal style="--delay: 0.16s">
+            <strong>20<em>+</em></strong>
+            <p>
+              AWS Lambda functions supporting scalable, event-driven document
+              workflows.
+            </p>
+          </article>
+
+          <article class="impact-card" data-reveal style="--delay: 0.24s">
+            <strong>99.5<em>%</em></strong>
+            <p>
+              Uptime SLA maintained through proactive incident management,
+              root-cause analysis, and reliable architecture.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="section" id="architecture" aria-labelledby="architecture-heading">
+      <div class="container">
+        <div data-reveal>
+          <h2 class="section-title" id="architecture-heading">
+            How the semantic search
+            <em>system actually works.</em>
+          </h2>
+          <p class="section-intro">
+            A production document intelligence pipeline running on Azure OpenAI,
+            PostgreSQL pgvector, and AWS serverless. Select any stage to see
+            how it works.
+          </p>
+        </div>
+
+        <div class="architecture-grid">
+          <div
+            class="pipeline"
+            id="pipeline-tabs"
+            role="tablist"
+            aria-label="Document intelligence pipeline stages"
+            data-reveal
+          >
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-1"
+              aria-controls="pipeline-panel"
+              aria-selected="true"
+            >
+              <span class="pipeline-step">01</span>
+              <span class="pipeline-name">Ingest</span>
+            </button>
+
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-2"
+              aria-controls="pipeline-panel"
+              aria-selected="false"
+            >
+              <span class="pipeline-step">02</span>
+              <span class="pipeline-name">Extract</span>
+            </button>
+
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-3"
+              aria-controls="pipeline-panel"
+              aria-selected="false"
+            >
+              <span class="pipeline-step">03</span>
+              <span class="pipeline-name">Chunk</span>
+            </button>
+
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-4"
+              aria-controls="pipeline-panel"
+              aria-selected="false"
+            >
+              <span class="pipeline-step">04</span>
+              <span class="pipeline-name">Embed</span>
+            </button>
+
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-5"
+              aria-controls="pipeline-panel"
+              aria-selected="false"
+            >
+              <span class="pipeline-step">05</span>
+              <span class="pipeline-name">Index</span>
+            </button>
+
+            <button
+              class="pipeline-node"
+              type="button"
+              role="tab"
+              id="pipeline-tab-6"
+              aria-controls="pipeline-panel"
+              aria-selected="false"
+            >
+              <span class="pipeline-step">06</span>
+              <span class="pipeline-name">Retrieve</span>
+            </button>
+          </div>
+
+          <div
+            class="pipeline-detail"
+            id="pipeline-panel"
+            role="tabpanel"
+            aria-labelledby="pipeline-tab-1"
+            tabindex="0"
+            data-reveal
+            style="--delay: 0.12s"
+          >
+            <p class="pipeline-eyebrow">Stage 01 — Ingest</p>
+            <h3>Source-agnostic document ingestion</h3>
+            <p>
+              Documents enter through S3 triggers and event streams, with change
+              detection keeping the index current as files are added, updated,
+              or removed.
+            </p>
+
+            <div class="pipeline-metric">
+              <strong>1M+</strong>
+              <span>Documents processed</span>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Amazon S3</span>
+              <span class="tag">EventBridge</span>
+              <span class="tag">AWS Lambda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="section" id="expertise" aria-labelledby="expertise-heading">
+      <div class="container">
+        <div data-reveal>
+
+          <h2 class="section-title" id="expertise-heading">
+            One engineer across
+            <em>the entire solution.</em>
+          </h2>
+
+          <p class="section-intro">
+            Connecting cloud infrastructure, application code, data, security,
+            and delivery into one reliable engineering system.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card" data-reveal>
+            <span class="expertise-number">01 / Cloud &amp; Serverless</span>
+            <h3>Cloud Architecture</h3>
+            <p>
+              Designing secure, multi-region AWS and Azure architectures using
+              serverless components, event-driven processing, and resilient
+              integration patterns.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Lambda</span>
+              <span class="tag">S3</span>
+              <span class="tag">DynamoDB</span>
+              <span class="tag">SQS</span>
+            </div>
+          </article>
+
+          <article
+            class="expertise-card"
+            data-reveal
+            style="--delay: 0.08s"
+          >
+            <span class="expertise-number">02 / AI &amp; Data</span>
+            <h3>Document Intelligence</h3>
+            <p>
+              Building AI-powered search and intelligent document workflows
+              using embeddings, vector similarity, and context-aware agentic
+              integrations.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Azure OpenAI</span>
+              <span class="tag">pgvector</span>
+              <span class="tag">Semantic Search</span>
+              <span class="tag">MCP</span>
+            </div>
+          </article>
+
+          <article
+            class="expertise-card"
+            data-reveal
+            style="--delay: 0.16s"
+          >
+            <span class="expertise-number">03 / Security</span>
+            <h3>Identity &amp; Integration</h3>
+            <p>
+              Implementing modern identity and interoperability across customer
+              devices, enterprise services, and multi-region deployments.
+            </p>
+
+            <div class="tags">
+              <span class="tag">OAuth 2.0</span>
+              <span class="tag">OIDC</span>
+              <span class="tag">PKCE</span>
+              <span class="tag">REST</span>
+              <span class="tag">SOAP</span>
+            </div>
+          </article>
+
+          <article
+            class="expertise-card"
+            data-reveal
+            style="--delay: 0.24s"
+          >
+            <span class="expertise-number">04 / Delivery</span>
+            <h3>Reliable Product Delivery</h3>
+            <p>
+              Improving release velocity, deployment safety, uptime, and
+              developer productivity through automation and strong technical
+              leadership.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">Blue-Green</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">SRE</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills explorer -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div data-reveal>
+          <h2 class="section-title" id="skills-heading">
+            Pick a domain and
+            <em>see what I ship.</em>
+          </h2>
+          <p class="section-intro">
+            Seven years of production delivery across five engineering domains.
+            Filter to explore the specific outcomes.
+          </p>
+        </div>
+
+        <div class="skills-filters" role="group" aria-label="Filter skills by domain" data-reveal>
+          <button class="skill-filter is-active" type="button" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="skill-filter" type="button" data-filter="cloud" aria-pressed="false">
+            Cloud
+          </button>
+          <button class="skill-filter" type="button" data-filter="backend" aria-pressed="false">
+            Backend
+          </button>
+          <button class="skill-filter" type="button" data-filter="ai" aria-pressed="false">
+            AI
+          </button>
+          <button class="skill-filter" type="button" data-filter="frontend" aria-pressed="false">
+            Frontend
+          </button>
+          <button class="skill-filter" type="button" data-filter="delivery" aria-pressed="false">
+            Delivery
+          </button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid" data-reveal style="--delay: 0.12s">
+          <article class="skill-card" data-domain="cloud">
+            <h3>Cloud Architecture</h3>
+            <p>
+              Multi-region AWS and Azure design using serverless and
+              event-driven patterns that stay resilient under load.
+            </p>
+            <ul class="skill-outcomes">
+              <li>20+ AWS Lambda functions in production</li>
+              <li>Serverless ingestion at 1M+ document scale</li>
+              <li>Multi-region resilience with SQS and DynamoDB streams</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-domain="backend">
+            <h3>Backend &amp; Integration</h3>
+            <p>
+              Secure .NET microservices and integration layers that connect
+              enterprise systems without leaking security holes.
+            </p>
+            <ul class="skill-outcomes">
+              <li>OAuth 2.0, OIDC, and PKCE across US, EU, and CA</li>
+              <li>SOAP-to-REST integration for enterprise consumers</li>
+              <li>C# / .NET microservices with event-driven contracts</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-domain="ai">
+            <h3>AI &amp; Document Intelligence</h3>
+            <p>
+              Retrieval systems and agentic workflows that make enterprise
+              documents genuinely searchable and actionable.
+            </p>
+            <ul class="skill-outcomes">
+              <li>Semantic search over 1M+ documents via pgvector</li>
+              <li>MCP servers wired into Azure DevOps and Figma</li>
+              <li>Agentic workflows for context-aware development</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-domain="frontend">
+            <h3>Frontend Engineering</h3>
+            <p>
+              Modern, accessible interfaces that stay fast as the product and
+              the team around them grow.
+            </p>
+            <ul class="skill-outcomes">
+              <li>Angular 12 → 17 PWA migration and modernization</li>
+              <li>Blazor enterprise web application migration</li>
+              <li>Progressive web apps for customer smart devices</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-domain="delivery">
+            <h3>Delivery &amp; Reliability</h3>
+            <p>
+              Pipelines and release practices that shorten feedback loops and
+              keep production predictable.
+            </p>
+            <ul class="skill-outcomes">
+              <li>CI/CD cut from 2 hours to 25 minutes — a 79% gain</li>
+              <li>10+ zero-downtime Blue-Green releases</li>
+              <li>99.5% uptime SLA through proactive incident response</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-domain="backend">
+            <h3>Engineering Leadership</h3>
+            <p>
+              Technical ownership that turns ambiguous initiatives into
+              shipped, reviewable, well-understood systems.
+            </p>
+            <ul class="skill-outcomes">
+              <li>Development Lead for strategic initiatives</li>
+              <li>Code review and technical design ownership</li>
+              <li>Excellence Contribution Award for delivery</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="container experience-layout">
+        <div class="experience-intro" data-reveal>
+
+          <h2 class="section-title" id="experience-heading">
+            Seven-plus years of
+            <em>shipping software.</em>
+          </h2>
+
+          <p>
+            A progression from enterprise project engineering and digital
+            transformation to cloud integration, modern application delivery,
+            and AI-powered document systems.
+          </p>
+        </div>
+
+        <div class="timeline" data-reveal style="--delay: 0.12s">
+          <!-- Xerox -->
+          <article class="timeline-item">
+            <div>
+              <div class="timeline-date">Apr 2024 — Present</div>
+              <div class="timeline-role">Full-time · On-site</div>
+            </div>
+
+            <div>
+              <h3>Xerox</h3>
+              <div class="timeline-role">Senior Software Engineer</div>
+
+              <ul>
+                <li>
+                  Designed and deployed <strong>AI-powered semantic search</strong>
+                  using Azure OpenAI embeddings and PostgreSQL pgvector,
+                  enabling intelligent querying across 1M+ enterprise documents.
+                </li>
+
+                <li>
+                  Architected <strong>20+ AWS Lambda functions</strong> supporting
+                  scalable, event-driven document workflows.
+                </li>
+
+                <li>
+                  Implemented <strong>OAuth 2.0 and OIDC authentication</strong>
+                  with PKCE and secure device authorization flows across US, EU,
+                  and CA deployments.
+                </li>
+
+                <li>
+                  Built a <strong>multi-region serverless architecture</strong>
+                  using S3 triggers, DynamoDB streams, and SQS queues for
+                  asynchronous processing.
+                </li>
+
+                <li>
+                  Reduced CI/CD pipeline time from <strong>2 hours to 25
+                  minutes—a 79% improvement</strong>—through an Azure DevOps
+                  parallelization strategy.
+                </li>
+
+                <li>
+                  Delivered <strong>10+ zero-downtime production releases</strong>
+                  using Blue-Green deployment on AWS Elastic Beanstalk.
+                </li>
+
+                <li>
+                  Maintained a <strong>99.5% uptime SLA</strong> through proactive
+                  P1/P2 incident management and root-cause analysis.
+                </li>
+
+                <li>
+                  Integrated <strong>MCP servers with Azure DevOps and Figma</strong>
+                  to automate context-aware development workflows and accelerate
+                  feature delivery.
+                </li>
+
+                <li>
+                  Acted as <strong>Development Lead</strong> for strategic
+                  initiatives, guiding technical design and code reviews.
+                </li>
+              </ul>
+
+              <div class="award">Excellence Contribution Award</div>
+            </div>
+          </article>
+
+          <!-- UST -->
+          <article class="timeline-item">
+            <div>
+              <div class="timeline-date">Apr 2022 — Mar 2024</div>
+              <div class="timeline-role">Bengaluru, India · On-site</div>
+            </div>
+
+            <div>
+              <h3>UST</h3>
+              <div class="timeline-role">Software Engineer</div>
+
+              <ul>
+                <li>
+                  Implemented <strong>PKCE security protocols</strong> for
+                  customer smart devices using OAuth 2.0 to strengthen
+                  application security.
+                </li>
+
+                <li>
+                  Migrated an <strong>Angular Progressive Web Application</strong>
+                  from version 12 to version 17, improving performance and
+                  modernizing the frontend platform.
+                </li>
+
+                <li>
+                  Specialized in <strong>AWS microservices architecture</strong>
+                  to develop scalable and secure cloud solutions tailored to
+                  business needs.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Wipro -->
+          <article class="timeline-item">
+            <div>
+              <div class="timeline-date">May 2019 — Apr 2022</div>
+              <div class="timeline-role">Bengaluru, India · On-site</div>
+            </div>
+
+            <div>
+              <h3>Wipro Limited</h3>
+              <div class="timeline-role">Project Engineer</div>
+
+              <ul>
+                <li>
+                  Led the <strong>Digital Transformation Team</strong>, resolving
+                  license compliance challenges involving Oracle products.
+                </li>
+
+                <li>
+                  Spearheaded migration of an enterprise web application to
+                  <strong>Blazor</strong>, enhancing performance and user
+                  experience.
+                </li>
+
+                <li>
+                  Facilitated integration of <strong>SOAP endpoints into REST
+                  APIs</strong>, enabling seamless communication between
+                  enterprise systems.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section stack" id="stack" aria-labelledby="stack-heading">
+      <div class="container stack-layout">
+        <div data-reveal>
+
+          <h2 class="section-title" id="stack-heading">
+            The right tools for
+            <em>real production problems.</em>
+          </h2>
+
+          <p class="section-intro">
+            A technology stack shaped by scalability, security, maintainability,
+            delivery speed, and the needs of the people using the product.
+          </p>
+        </div>
+
+        <div data-reveal style="--delay: 0.12s">
+          <div class="stack-group">
+            <div class="stack-label">Cloud & Infrastructure</div>
+            <span class="tag">AWS</span>
+            <span class="tag">Microsoft Azure</span>
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">S3</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">SQS</span>
+            <span class="tag">Elastic Beanstalk</span>
+          </div>
+
+          <div class="stack-group">
+            <div class="stack-label">Backend & Integration</div>
+            <span class="tag">C#</span>
+            <span class="tag">.NET</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">SOAP</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">OIDC</span>
+            <span class="tag">PKCE</span>
+          </div>
+
+          <div class="stack-group">
+            <div class="stack-label">AI & Data</div>
+            <span class="tag">Azure OpenAI</span>
+            <span class="tag">Embeddings</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">pgvector</span>
+            <span class="tag">Semantic Search</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Agentic AI</span>
+          </div>
+
+          <div class="stack-group">
+            <div class="stack-label">Frontend & Delivery</div>
+            <span class="tag">Angular</span>
+            <span class="tag">Blazor</span>
+            <span class="tag">Progressive Web Apps</span>
+            <span class="tag">Azure DevOps</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Blue-Green Deployment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div data-reveal>
+
+          <h2 class="section-title" id="contact-heading">
+            Let’s build something
+            <em>worth scaling.</em>
+          </h2>
+
+          <p class="contact-copy">
+            Interested in cloud integration, .NET engineering, AI document
+            systems, or agentic workflows? Connect with me and let’s discuss
+            the problem.
+          </p>
+
+          <div class="contact-actions">
+            <a
+              class="button button-primary"
+              href="https://www.linkedin.com/in/ragul-murugan-9a2205123/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="#experience">
+              Review experience
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-links" data-reveal style="--delay: 0.12s">
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/ragul-murugan-9a2205123/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn Profile</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-link" href="#impact">
+            <span>Selected Impact</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-link" href="#experience">
+            <span>Professional Experience</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  
+
+        </div>
+      </main>
+
+      <!-- Terminal panel -->
+      <div class="terminal-panel" id="terminal-panel">
+    <div class="terminal" aria-label="Interactive developer profile terminal">
+      <div class="term-brand">
+        <div class="term-brand__rule"></div>
+
+        <p class="term-brand__title">
+          <span class="term-brand__char-bright">AI Engineer</span>
+        </p>
+
+        <p class="term-brand__meta">
+          <span class="term-brand__char-accent">cloud</span>
+          <span class="term-brand__char-dim">·</span>
+          <span class="term-brand__char-accent">backend</span>
+          <span class="term-brand__char-dim">·</span>
+          <span class="term-brand__char-accent">agents</span>
+        </p>
+
+        <div class="term-brand__rule"></div>
+      </div>
+
+      </div>
+
+      <div
+        class="terminal-body"
+        id="terminal-body"
+        role="log"
+        aria-live="polite"
+        aria-label="Terminal output"
+      >
+        <div class="terminal-line terminal-command">
+          <span class="terminal-prompt">ragul &gt;</span>
+          <span>--profile</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">name</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">Ragul Murugan</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">role</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">Senior Software Engineer @ Xerox</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">experience</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">7+ years</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">education</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value"
+            >B.E. CSE — Jeppiaar Institute of Technology</span
+          >
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">cloud</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">AWS / Azure</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">backend</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">C# / .NET / Microservices</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">frontend</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">Angular / Blazor</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">ai</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">Semantic Search / MCP / Agents</span>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-key">focus</span>
+          <span class="terminal-separator">:</span>
+          <span class="terminal-value">Reliable systems at scale ↗</span>
+        </div>
+
+        <div class="terminal-line terminal-hint">
+          <span class="terminal-prompt">ragul &gt;</span>
+          <span>type </span>
+          <span class="terminal-key">help</span>
+          <span> for available commands</span>
+        </div>
+      </div>
+
+      <form class="terminal-input" id="terminal-form" autocomplete="off" method="post" action="#terminal-command">
+        <label class="terminal-prompt" for="terminal-command">ragul &gt;</label>
+        <input
+          class="terminal-field"
+          id="terminal-command"
+          type="text"
+          placeholder="help"
+          aria-label="Terminal command"
+          spellcheck="false"
+          autocapitalize="off"
+        />
+        <button class="terminal-submit" type="submit" aria-label="Run command">
+          Run
+        </button>
+      </form>
+
+      <div class="terminal-status" aria-hidden="true">
+        <span class="terminal-status-item">
+          <span class="terminal-status-key">model</span>
+          <span class="terminal-status-val">senior-engineer</span>
+        </span>
+        <span class="terminal-status-item">
+          <span class="terminal-status-key">stack</span>
+          <span class="terminal-status-val">aws / azure / .net</span>
+        </span>
+        <span class="terminal-status-item">
+          <span class="terminal-status-key">ctx</span>
+          <span class="terminal-status-val">7y+</span>
+        </span>
+      </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>
+          © <span id="current-year"></span>
+          <strong>Ragul Murugan</strong>
+        </span>
+
+        <span>Designed for clarity. Built for production.</span>
+      </div>
+    </footer>
+
+    <!-- Status bar -->
+    <div class="status-bar" id="status-bar">
+        <span class="status-bar__item">
+          <span class="status-bar__key">branch</span>
+          <span class="status-bar__val">main</span>
+        </span>
+        <span class="status-bar__item">
+          <span class="status-bar__key">model</span>
+          <span class="status-bar__val">senior-engineer</span>
+        </span>
+        <span class="status-bar__item status-bar__item--accent">
+          <span class="status-bar__key">ctx</span>
+          <span class="status-bar__val">7y+</span>
+        </span>
+        <span class="status-bar__spacer"></span>
+        <span class="status-bar__item">
+          <span class="status-bar__key">stack</span>
+          <span class="status-bar__val">aws / azure / .net</span>
+        </span>
+      </div>
+  </div>
+
+<script>
+    // Current year
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    // Header state
+    const header = document.getElementById("site-header");
+
+    function updateHeader() {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    }
+
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+
+    // Mobile navigation
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.getElementById("primary-nav");
+
+    function closeMenu() {
+      navigation.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+
+    // Close the mobile menu when the viewport grows past the breakpoint,
+    // otherwise the page stays locked with overflow hidden.
+    const desktopQuery = window.matchMedia("(min-width: 801px)");
+
+    function handleBreakpointChange(event) {
+      if (event.matches) closeMenu();
+    }
+
+    if (desktopQuery.addEventListener) {
+      desktopQuery.addEventListener("change", handleBreakpointChange);
+    } else {
+      desktopQuery.addListener(handleBreakpointChange);
+    }
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll("[data-reveal]");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px"
+        }
+      );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    }
+
+    // Interactive terminal
+    const terminalBody = document.getElementById("terminal-body");
+    const terminalForm = document.getElementById("terminal-form");
+    const terminalField = document.getElementById("terminal-command");
+
+    const terminalCommands = {
+      help: {
+        description: "List available commands",
+        output: [
+          ["help", "show this list"],
+          ["about", "profile and background"],
+          ["skills", "technical strengths"],
+          ["stack", "technologies I work with"],
+          ["impact", "measurable outcomes"],
+          ["education", "academic background"],
+          ["contact", "how to reach me"],
+          ["clear", "clear the terminal"],
+        ],
+      },
+      about: {
+        description: "Profile and background",
+        output: [
+          ["name", "Ragul Murugan"],
+          ["role", "Senior Software Engineer @ Xerox"],
+          ["experience", "7+ years across cloud and software engineering"],
+          ["focus", "LLMs, agentic AI, intelligent document systems"],
+          ["location", "Chennai, India"],
+        ],
+      },
+      skills: {
+        description: "Technical strengths",
+        output: [
+          ["cloud", "AWS and Azure multi-region architecture"],
+          ["backend", "C# / .NET microservices, REST and SOAP integration"],
+          ["security", "OAuth 2.0, OIDC, PKCE, device authorization"],
+          ["ai", "Semantic search, embeddings, pgvector, MCP servers"],
+          ["frontend", "Angular, Blazor, Progressive Web Apps"],
+          ["delivery", "Azure DevOps CI/CD, Blue-Green deployments"],
+        ],
+      },
+      stack: {
+        description: "Technologies I work with",
+        output: [
+          ["languages", "C#, .NET, TypeScript, SQL, Python"],
+          ["cloud", "AWS Lambda, S3, DynamoDB, SQS, Azure"],
+          ["data", "PostgreSQL, pgvector, Azure OpenAI embeddings"],
+          ["frontend", "Angular, Blazor, PWA"],
+          ["devops", "Azure DevOps, CI/CD, Blue-Green, Docker"],
+        ],
+      },
+      impact: {
+        description: "Measurable outcomes",
+        output: [
+          ["documents", "1M+ enterprise documents made searchable"],
+          ["cicd", "pipeline time cut from 2 hours to 25 minutes (79%)"],
+          ["serverless", "20+ AWS Lambda functions in production"],
+          ["uptime", "99.5% uptime SLA maintained"],
+          ["releases", "10+ zero-downtime production releases"],
+        ],
+      },
+      education: {
+        description: "Academic background",
+        output: [
+          ["degree", "Bachelor of Engineering in Computer Science and Engineering"],
+          ["institution", "Jeppiaar Institute of Technology"],
+          ["university", "Anna University, Chennai"],
+        ],
+      },
+      contact: {
+        description: "How to reach me",
+        output: [
+          ["linkedin", "linkedin.com/in/ragul-murugan-9a2205123"],
+          ["status", "Open to interesting cloud, AI, and platform work"],
+        ],
+      },
+    };
+
+    function appendTerminalLine(parts, className) {
+      const line = document.createElement("div");
+      line.className = className || "terminal-line";
+
+      parts.forEach((part) => {
+        const span = document.createElement("span");
+
+        if (typeof part === "string") {
+          span.textContent = part;
+        } else {
+          span.textContent = part.text;
+          span.className = part.className;
+        }
+
+        line.appendChild(span);
+      });
+
+      terminalBody.appendChild(line);
+      return line;
+    }
+
+    function renderCommandOutput(command) {
+      const entry = terminalCommands[command];
+
+      if (!entry) {
+        appendTerminalLine(
+          [
+            { text: `command not found: ${command}`, className: "terminal-error" },
+          ],
+          "terminal-line"
+        );
+        appendTerminalLine(
+          [
+            { text: "type ", className: "" },
+            { text: "help", className: "terminal-key" },
+            { text: " for available commands", className: "" },
+          ],
+          "terminal-line terminal-hint"
+        );
+        return;
+      }
+
+      entry.output.forEach(([key, value]) => {
+        appendTerminalLine(
+          [
+            { text: key, className: "terminal-key" },
+            { text: ": ", className: "terminal-separator" },
+            { text: value, className: "terminal-value" },
+          ],
+          "terminal-line"
+        );
+      });
+    }
+
+    terminalForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const raw = terminalField.value.trim();
+      terminalField.value = "";
+
+      if (!raw) return;
+
+      appendTerminalLine(
+        [
+          { text: "ragul > ", className: "terminal-prompt" },
+          { text: raw, className: "" },
+        ],
+        "terminal-line terminal-command"
+      );
+
+      if (raw.toLowerCase() === "clear") {
+        terminalBody.replaceChildren();
+        return;
+      }
+
+      renderCommandOutput(raw.toLowerCase());
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    });
+
+
+    // Architecture pipeline tabs
+    const pipelineTabs = Array.from(
+      document.querySelectorAll(".pipeline-node")
+    );
+    const pipelinePanel = document.getElementById("pipeline-panel");
+
+    const pipelineStages = {
+      Ingest: {
+        title: "Source-agnostic document ingestion",
+        body: "Documents enter through S3 triggers and event streams, with change detection keeping the index current as files are added, updated, or removed.",
+        metric: ["1M+", "Documents processed"],
+        tags: ["Amazon S3", "EventBridge", "AWS Lambda"],
+      },
+      Extract: {
+        title: "Text and structure extraction",
+        body: "Each document is parsed into clean, structured content while preserving headings, tables, and section boundaries so downstream chunks stay meaningful.",
+        metric: ["20+", "Lambda functions"],
+        tags: ["Python", "Text Parsing", "S3"],
+      },
+      Chunk: {
+        title: "Context-preserving chunking",
+        body: "Documents are split on semantic boundaries rather than fixed character counts, keeping related passages together so retrieved context stays coherent.",
+        metric: ["512", "Token chunks"],
+        tags: ["Semantic Splitting", "Context Windows"],
+      },
+      Embed: {
+        title: "Vectorized with Azure OpenAI",
+        body: "Each chunk is converted into a dense vector embedding, capturing meaning so that queries match documents by intent rather than keyword overlap.",
+        metric: ["1536", "Embedding dimensions"],
+        tags: ["Azure OpenAI", "Embeddings", "text-embedding-3"],
+      },
+      Index: {
+        title: "Indexed in PostgreSQL pgvector",
+        body: "Embeddings are persisted in pgvector alongside metadata and source references, giving a durable index that scales with the corpus.",
+        metric: ["99.5%", "Index availability"],
+        tags: ["PostgreSQL", "pgvector", "Metadata"],
+      },
+      Retrieve: {
+        title: "Ranked semantic retrieval",
+        body: "A user query is embedded and matched against the index using vector similarity, returning the most relevant passages with their source links intact.",
+        metric: ["1M+", "Searchable documents"],
+        tags: ["Vector Similarity", "Ranking", "C# / .NET"],
+      },
+    };
+
+    function activatePipelineStage(tab) {
+      const stageKey = tab.querySelector(".pipeline-name").textContent.trim();
+      const stage = pipelineStages[stageKey];
+
+      if (!stage) return;
+
+      const index = pipelineTabs.indexOf(tab) + 1;
+      const label = `Stage ${String(index).padStart(2, "0")} — ${stageKey}`;
+
+      pipelineTabs.forEach((item) => {
+        item.setAttribute("aria-selected", String(item === tab));
+      });
+
+      pipelinePanel.setAttribute("aria-labelledby", tab.id);
+
+      pipelinePanel.replaceChildren();
+
+      const eyebrow = document.createElement("p");
+      eyebrow.className = "pipeline-eyebrow";
+      eyebrow.textContent = label;
+
+      const heading = document.createElement("h3");
+      heading.textContent = stage.title;
+
+      const body = document.createElement("p");
+      body.textContent = stage.body;
+
+      const metric = document.createElement("div");
+      metric.className = "pipeline-metric";
+
+      const metricValue = document.createElement("strong");
+      metricValue.textContent = stage.metric[0];
+
+      const metricLabel = document.createElement("span");
+      metricLabel.textContent = stage.metric[1];
+
+      metric.append(metricValue, metricLabel);
+
+      const tags = document.createElement("div");
+      tags.className = "tags";
+
+      stage.tags.forEach((tag) => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        tags.appendChild(span);
+      });
+
+      pipelinePanel.append(eyebrow, heading, body, metric, tags);
+    }
+
+    pipelineTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activatePipelineStage(tab));
+
+      tab.addEventListener("keydown", (event) => {
+        let nextIndex = null;
+
+        if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+          nextIndex = (index + 1) % pipelineTabs.length;
+        } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+          nextIndex = (index - 1 + pipelineTabs.length) % pipelineTabs.length;
+        } else if (event.key === "Home") {
+          nextIndex = 0;
+        } else if (event.key === "End") {
+          nextIndex = pipelineTabs.length - 1;
+        }
+
+        if (nextIndex === null) return;
+
+        event.preventDefault();
+        pipelineTabs[nextIndex].focus();
+        activatePipelineStage(pipelineTabs[nextIndex]);
+      });
+    });
+
+    // Skills filter
+    const skillFilters = Array.from(
+      document.querySelectorAll(".skill-filter")
+    );
+    const skillCards = Array.from(
+      document.querySelectorAll(".skill-card")
+    );
+
+    skillFilters.forEach((filter) => {
+      filter.addEventListener("click", () => {
+        const target = filter.dataset.filter;
+
+        skillFilters.forEach((item) => {
+          const isActive = item === filter;
+
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+
+        skillCards.forEach((card) => {
+          const isVisible =
+            target === "all" || card.dataset.domain === target;
+
+          card.classList.toggle("is-hidden", !isVisible);
+        });
+      });
+    });
+
+    // Active nav link highlighting
+    const sectionIds = ["about", "impact", "architecture", "expertise", "skills", "experience", "stack"];
+    const navAnchors = Array.from(
+      document.querySelectorAll(".nav-links a")
+    ).filter((link) => link.getAttribute("href").startsWith("#"));
+
+    if ("IntersectionObserver" in window) {
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            navAnchors.forEach((link) => {
+              const isActive =
+                link.getAttribute("href") === `#${entry.target.id}`;
+
+              link.classList.toggle("is-active", isActive);
+            });
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" }
+      );
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+
+        if (section) sectionObserver.observe(section);
+      });
+    }
+
+    // ── IDE shell: sidebar tree, drawer, status bar ──────────────
+
+    const treeItems = Array.from(document.querySelectorAll(".tree-item"));
+    const treeDirs = Array.from(document.querySelectorAll(".tree-dir"));
+    const contentScroll = document.getElementById("content");
+    const sidebar = document.getElementById("sidebar");
+    const sidebarBackdrop = document.getElementById("sidebar-backdrop");
+
+    // ── File tree ────────────────────────────────────────────────
+    // Modelled on the reference site's explorer: folders swap between
+    // open/closed icons, children reveal one at a time, and the
+    // connector lines are drawn on a canvas behind the rows.
+
+    const FOLDER_CLOSED =
+      '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor">' +
+      '<path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/></svg>';
+
+    const FOLDER_OPEN =
+      '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor">' +
+      '<path d="M2 4v8.5h12V6H8.5L7 4H2z" stroke-width="1.3" stroke-linejoin="round"/>' +
+      '<path d="M2 7h10.5l-1.5 5.5H.5L2 7z" stroke-width="1" stroke-linejoin="round" ' +
+      'fill="currentColor" opacity="0.08"/></svg>';
+
+    const animatingDirs = new Set();
+
+    function guideX(depth) {
+      // 16px base padding + 16px per depth + the icon column centre
+      return 16 + depth * 16 + 8;
+    }
+
+    function drawConnector(ctx, x, prevY, childY) {
+      ctx.strokeStyle = "rgba(58, 54, 50, 0.6)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, prevY);
+      ctx.lineTo(x, childY);
+      ctx.moveTo(x, childY);
+      ctx.lineTo(x + 8, childY);
+      ctx.stroke();
+    }
+
+    function createCanvas(guided) {
+      const old = guided.querySelector(".tree-guide-canvas");
+
+      if (old) old.remove();
+
+      const canvas = document.createElement("canvas");
+      canvas.className = "tree-guide-canvas";
+
+      const rect = guided.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = rect.width + "px";
+      canvas.style.height = rect.height + "px";
+
+      const ctx = canvas.getContext("2d");
+      ctx.scale(dpr, dpr);
+
+      guided.insertBefore(canvas, guided.firstChild);
+
+      return ctx;
+    }
+
+    function drawStaticLines(guided, depth) {
+      const items = guided.querySelectorAll(":scope > .tree-item, :scope > .tree-dir");
+
+      if (!items.length) return;
+
+      const rect = guided.getBoundingClientRect();
+
+      if (rect.width === 0 || rect.height === 0) {
+        requestAnimationFrame(() => drawStaticLines(guided, depth));
+        return;
+      }
+
+      const ctx = createCanvas(guided);
+      const x = guideX(depth);
+      let prevY = 0;
+
+      items.forEach((el) => {
+        let centerY;
+
+        if (el.classList.contains("tree-dir")) {
+          const dirItem = el.querySelector(".tree-item");
+          centerY =
+            el.offsetTop +
+            (dirItem ? dirItem.offsetHeight / 2 : el.offsetHeight / 2);
+        } else {
+          centerY = el.offsetTop + el.offsetHeight / 2;
+        }
+
+        drawConnector(ctx, x, prevY, centerY);
+        prevY = centerY;
+      });
+    }
+
+    function redrawAncestorLines(container) {
+      let node = container;
+
+      while (node) {
+        const dirWrapper = node.parentElement?.closest(".tree-dir");
+
+        if (dirWrapper) {
+          const guided = dirWrapper.querySelector(":scope > .tree-children > .tree-children-guided");
+
+          if (guided && guided.parentElement.classList.contains("expanded")) {
+            const depth = Number(guided.dataset.depth || 0);
+            requestAnimationFrame(() => drawStaticLines(guided, depth));
+          }
+        }
+
+        node = dirWrapper;
+      }
+    }
+
+    function expandChildren(container, depth, dirPath) {
+      animatingDirs.add(dirPath);
+      container.classList.add("expanded");
+
+      const guided = container.querySelector(".tree-children-guided");
+      const items = guided.querySelectorAll(":scope > .tree-item, :scope > .tree-dir");
+
+      items.forEach((el) => el.classList.remove("tree-visible"));
+
+      container.style.overflow = "hidden";
+      container.style.maxHeight = "0px";
+      container.style.transition = "max-height 0.15s ease";
+
+      const delay = 180;
+      const initialOffset = 40;
+
+      items.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add("tree-visible");
+
+          const bottomEdge = el.offsetTop + el.offsetHeight;
+          container.style.maxHeight = bottomEdge + "px";
+        }, i * delay + initialOffset);
+      });
+
+      const last = items[items.length - 1];
+
+      if (last) {
+        setTimeout(() => {
+          container.style.maxHeight = "";
+          container.style.overflow = "";
+          container.style.transition = "";
+          animatingDirs.delete(dirPath);
+          redrawAncestorLines(container);
+        }, items.length * delay + initialOffset + 200);
+      } else {
+        animatingDirs.delete(dirPath);
+      }
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => drawStaticLines(guided, depth));
+      });
+    }
+
+    function collapseChildren(container, dirPath) {
+      animatingDirs.add(dirPath);
+
+      const guided = container.querySelector(".tree-children-guided");
+      const items = Array.from(
+        guided.querySelectorAll(":scope > .tree-item, :scope > .tree-dir")
+      );
+
+      // Hide from the bottom up so the collapse reads top-to-bottom
+      const offsets = items.map((el) => el.offsetTop);
+
+      items.reverse().forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.remove("tree-visible");
+
+          setTimeout(() => {
+            const index = items.length - 1 - i;
+            container.style.maxHeight = (offsets[index] || 0) + "px";
+          }, 120);
+        }, i * 180 + 40);
+      });
+
+      container.style.overflow = "hidden";
+      container.style.maxHeight = container.scrollHeight + "px";
+      void container.offsetHeight;
+      container.style.transition = "max-height 0.2s ease";
+
+      setTimeout(() => {
+        container.classList.remove("expanded");
+        container.style.maxHeight = "";
+        container.style.overflow = "";
+        container.style.transition = "";
+        animatingDirs.delete(dirPath);
+        redrawAncestorLines(container);
+      }, items.length * 180 + 340);
+    }
+
+    let lastActiveSection = null;
+
+    function setActiveTreeItem(id, revealBranch) {
+      treeItems.forEach((item) => {
+        item.classList.toggle("is-active", item.dataset.section === id);
+      });
+
+      // Only reveal a branch when the active section actually changed,
+      // so scrolling never re-opens a branch the user closed by hand.
+      if (id === lastActiveSection) return;
+
+      lastActiveSection = id;
+
+      if (!revealBranch) return;
+
+      // Auto-reveal the branch containing the active section.
+      // The expanded state lives on aria-expanded, so read that —
+      // a stale class here would re-expand a branch the user just closed.
+      const active = treeItems.find(
+        (item) => item.dataset.section === id && item.dataset.child
+      );
+
+      if (active) {
+        const dir = active.closest(".tree-dir");
+        const item = dir?.querySelector(":scope > .tree-item");
+        const container = dir?.querySelector(":scope > .tree-children");
+        const isExpanded = item?.getAttribute("aria-expanded") === "true";
+
+        if (dir && item && container && !isExpanded) {
+          // Don't fight a collapse that is still running
+          if (animatingDirs.has(dir.dataset.path)) return;
+
+          item.setAttribute("aria-expanded", "true");
+          item.querySelector(".tree-icon").innerHTML = FOLDER_OPEN;
+          expandChildren(container, 0, dir.dataset.path);
+        }
+      }
+    }
+
+    // Wire up each folder row
+    treeDirs.forEach((dir) => {
+      const item = dir.querySelector(":scope > .tree-item");
+      const container = dir.querySelector(":scope > .tree-children");
+      const icon = item.querySelector(".tree-icon");
+      const path = dir.dataset.path;
+
+      const toggle = () => {
+        if (animatingDirs.has(path)) return;
+
+        const isExpanded = item.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+          item.setAttribute("aria-expanded", "false");
+          icon.innerHTML = FOLDER_CLOSED;
+          collapseChildren(container, path);
+        } else {
+          item.setAttribute("aria-expanded", "true");
+          icon.innerHTML = FOLDER_OPEN;
+          expandChildren(container, 0, path);
+        }
+      };
+
+      item.addEventListener("click", (event) => {
+        // The folder row both expands and opens its tab
+        event.preventDefault();
+        toggle();
+      });
+
+      item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          toggle();
+        }
+      });
+    });
+
+    // Keep the tree in sync with the section on screen
+    if ("IntersectionObserver" in window && contentScroll) {
+      const treeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveTreeItem(entry.target.id, true);
+            }
+          });
+        },
+        {
+          root: contentScroll,
+          rootMargin: "-20% 0px -70% 0px",
+          threshold: 0
+        }
+      );
+
+      treeItems.forEach((item) => {
+        const section = document.getElementById(item.dataset.section);
+
+        if (section) treeObserver.observe(section);
+      });
+    }
+
+    // ── Tabs ────────────────────────────────────────────────────
+    // Clicking a tree parent opens a tab next to Welcome. Tabs can
+    // be closed. Clicking an open parent toggles its child tree.
+
+    const tabBar = document.getElementById("tab-bar");
+    const openTabs = new Map();
+
+    const TAB_LABELS = {
+      about: "about.md",
+      impact: "impact.json",
+      architecture: "architecture.ts",
+      expertise: "expertise.md",
+      skills: "skills.json",
+      experience: "experience.log",
+      stack: "stack.json",
+      contact: "contact.md",
+    };
+
+    function scrollContentTo(target) {
+      if (!target || !contentScroll) return;
+
+      // scrollIntoView alone scrolls the nearest scrollable ancestor,
+      // which can be the window. Compute the offset within the
+      // content pane and scroll that directly.
+      const targetTop =
+        target.getBoundingClientRect().top -
+        contentScroll.getBoundingClientRect().top +
+        contentScroll.scrollTop;
+
+      // NOTE: .content-scroll has CSS `scroll-behavior: smooth`, and
+      // scrollTo({behavior:'auto'}) does NOT override that — the
+      // stylesheet wins. Animate the scrollTop directly instead.
+      const start = contentScroll.scrollTop;
+      const distance = Math.max(0, targetTop - 12) - start;
+      const duration = 520;
+      const startedAt = performance.now();
+
+      function step(now) {
+        const t = Math.min(1, (now - startedAt) / duration);
+        // ease-in-out-cubic — slow, deliberate, "butter"
+        const eased =
+          t < 0.5
+            ? 4 * t * t * t
+            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        contentScroll.scrollTop = start + distance * eased;
+
+        if (t < 1) requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    function activateTab(tab) {
+      if (!tab) return;
+
+      tabBar.querySelectorAll(".tab").forEach((item) => {
+        item.classList.toggle("is-active", item === tab);
+      });
+
+      // Keep the active tab visible in the bar
+      tab.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+
+    function closeTab(tab) {
+      const section = tab.dataset.tab;
+
+      openTabs.delete(section);
+      tab.classList.add("is-leaving");
+
+      const wasActive = tab.classList.contains("is-active");
+
+      // After the collapse animation, drop it from the DOM
+      setTimeout(() => {
+        tab.remove();
+        tab.classList.remove("is-leaving");
+      }, 280);
+
+      if (wasActive) {
+        // Fall back to the Welcome tab
+        const welcome = tabBar.querySelector('.tab[data-tab="home"]');
+
+        if (welcome) activateTab(welcome);
+      }
+    }
+
+    function openTab(section, label) {
+      const existing = tabBar.querySelector(`.tab[data-tab="${section}"]`);
+
+      if (existing) {
+        activateTab(existing);
+        return existing;
+      }
+
+      const tab = document.createElement("div");
+      tab.className = "tab is-entering";
+      tab.setAttribute("role", "tab");
+      tab.setAttribute("tabindex", "0");
+      tab.dataset.tab = section;
+      tab.innerHTML =
+        '<span class="tab__dot" aria-hidden="true"></span>' +
+        '<span class="tab__label"></span>' +
+        '<span class="tab__close" role="button" tabindex="0" aria-label="Close tab">×</span>';
+
+      tab.querySelector(".tab__label").textContent = label;
+
+      tabBar.appendChild(tab);
+      openTabs.set(section, tab);
+
+      // Remove the enter class so the animation doesn't replay
+      tab.addEventListener("animationend", () => {
+        tab.classList.remove("is-entering");
+      });
+
+      // Clicking the × closes it
+      tab.querySelector(".tab__close").addEventListener("click", (event) => {
+        event.stopPropagation();
+        closeTab(tab);
+      });
+
+      // Clicking the tab body activates it
+      tab.addEventListener("click", () => {
+        activateTab(tab);
+        scrollContentTo(document.getElementById(section));
+      });
+
+      tab.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          activateTab(tab);
+          scrollContentTo(document.getElementById(section));
+        }
+      });
+
+      activateTab(tab);
+
+      return tab;
+    }
+
+    // Tree click behaviour
+    treeItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        const section = item.dataset.section;
+        const isChild = Boolean(item.dataset.child);
+
+        if (!section) return;
+
+        event.preventDefault();
+
+        // A child scrolls to the same section as its parent
+        if (isChild) {
+          scrollContentTo(document.getElementById(section));
+          setActiveTreeItem(section, false);
+          closeSidebarDrawer();
+          return;
+        }
+
+        // Note: the folder row's own handler (wired up in the file-tree
+        // block above) owns the expand/collapse toggle. This handler is
+        // only responsible for opening the matching tab.
+
+        // A parent always opens its tab
+        const label = TAB_LABELS[section] || item.textContent.trim();
+        const tab = openTab(section, label);
+
+        activateTab(tab);
+        scrollContentTo(document.getElementById(section));
+        setActiveTreeItem(section, false);
+        closeSidebarDrawer();
+      });
+    });
+
+    // ── Window controls ─────────────────────────────────────────
+    // The traffic lights are decorative, but they should do
+    // something meaningful rather than sit there inert.
+
+    const appShell = document.querySelector(".app-shell");
+    const windowButtons = document.querySelectorAll("[data-window-action]");
+
+    windowButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const action = button.dataset.windowAction;
+
+        if (action === "maximize") {
+          const isFull = document.fullscreenElement;
+
+          if (isFull) {
+            document.exitFullscreen?.();
+          } else {
+            document.documentElement.requestFullscreen?.().catch(() => {
+              // Fullscreen was blocked — fall back to a CSS "zoomed" state
+              appShell?.classList.toggle("is-zoomed");
+            });
+          }
+          return;
+        }
+
+        if (action === "minimize") {
+          // Collapse the window down to the title bar
+          appShell?.classList.toggle("is-minimized");
+          return;
+        }
+
+        if (action === "close") {
+          // Close the active tab, or the whole window if Welcome is active
+          const activeTab = tabBar?.querySelector(".tab.is-active");
+
+          if (activeTab && activeTab.dataset.tab !== "home") {
+            closeTab(activeTab);
+          } else {
+            appShell?.classList.toggle("is-closed");
+          }
+        }
+      });
+    });
+
+    // Mobile drawer
+    function openSidebarDrawer() {
+      sidebar?.classList.add("is-open");
+      sidebarBackdrop?.classList.add("is-open");
+      menuButton.setAttribute("aria-expanded", "true");
+      menuButton.setAttribute("aria-label", "Close navigation");
+    }
+
+    function closeSidebarDrawer() {
+      sidebar?.classList.remove("is-open");
+      sidebarBackdrop?.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+    }
+
+    sidebarBackdrop?.addEventListener("click", closeSidebarDrawer);
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = sidebar?.classList.contains("is-open");
+
+      if (isOpen) {
+        closeSidebarDrawer();
+      } else {
+        openSidebarDrawer();
+      }
+    });
+
+    // On desktop the drawer state is meaningless — reset it
+    function handleDesktopBreakpoint(event) {
+      if (event.matches) closeSidebarDrawer();
+    }
+
+    const drawerQuery = window.matchMedia("(min-width: 801px)");
+
+    if (drawerQuery.addEventListener) {
+      drawerQuery.addEventListener("change", handleDesktopBreakpoint);
+    } else {
+      drawerQuery.addListener(handleDesktopBreakpoint);
+    }
+  </script>
+
+</body>
+</html>
