@@ -1,9 +1,13 @@
 # Custom domain setup — ragulmurugan.dev
 
-GitHub Pages is already configured to serve this site from
-`ragulmurugan.dev` (the `CNAME` file is committed and the Pages
-`cname` setting is set). The only remaining step is DNS, which has
-to be done at your domain registrar.
+**Order matters.** Add the DNS records FIRST, then set the
+custom domain on GitHub. Setting the custom domain before DNS
+resolves makes GitHub 301-redirect the live site to a domain that
+does not exist, which takes the site offline.
+
+Right now the site correctly serves from
+`https://ragul29.github.io/ragul-portfolio/` and the domain is
+not yet configured. Work through the steps below in order.
 
 ## 1. Add the DNS records
 
@@ -24,7 +28,27 @@ present — GitHub rotates across them.
 If your provider has an "ALIAS"/"ANAME" or "apex" record type,
 an ALIAS to `ragul29.github.io` also works.
 
-## 2. Wait for the certificate
+## 2. Point GitHub Pages at the domain
+
+Only after the A records resolve, set the custom domain. This
+creates the `CNAME` file in the repo and updates the Pages
+setting:
+
+```bash
+echo ragulmurugan.dev > CNAME
+git add CNAME
+git commit -m "Add CNAME for custom domain"
+git push
+```
+
+GitHub's API can do it too:
+
+```bash
+echo '{"cname":"ragulmurugan.dev"}' > /tmp/pages.json
+gh api -X PUT repos/Ragul29/ragul-portfolio/pages --input /tmp/pages.json
+```
+
+## 3. Wait for the certificate
 
 After the A records resolve, GitHub issues a TLS certificate
 automatically. It can take up to ~24 hours, but is usually a few
@@ -36,7 +60,7 @@ gh api repos/Ragul29/ragul-portfolio/pages --jq '{cname: .cname, https: .https_e
 
 `"https": true` and `"status": "built"` means you are done.
 
-## 3. Enable HTTPS enforcement
+## 4. Enable HTTPS enforcement
 
 Once the certificate exists:
 
@@ -49,7 +73,7 @@ Until the certificate exists this call fails with
 `"The certificate does not exist yet"` — that is expected, not a
 problem with the setup.
 
-## 4. Switch the canonical URL
+## 5. Switch the canonical URL
 
 The page currently declares its canonical as the GitHub Pages
 address, which is correct and safe while the domain is being set
