@@ -3442,9 +3442,259 @@
       border-top: 1px solid var(--cc-line);
     }
 
+    /* ── Mobile ───────────────────────────────────────────────
+       Below 900px the app becomes a single-column phone app:
+       the title bar gets a terminal toggle, the sidebar becomes a
+       drawer, and the terminal slides up as a bottom sheet. */
+
+    .terminal-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      border: 1px solid var(--cc-line);
+      border-radius: var(--cc-radius-xs);
+      color: var(--cc-dim);
+      background: transparent;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition:
+        color 0.2s var(--ease-apple),
+        border-color 0.2s var(--ease-apple);
+    }
+
+    .terminal-toggle:hover,
+    .terminal-toggle[aria-expanded="true"] {
+      color: var(--cc-orange);
+      border-color: var(--cc-orange-dim);
+    }
+
+    @media (max-width: 900px) {
+      .terminal-toggle {
+        display: flex;
+      }
+
+      /* The terminal becomes a bottom sheet sliding up from the
+         bottom of the screen, the way the reference app does. */
+      .terminal-panel {
+        /* Reset the desktop "hidden below 900px" rule — the panel
+           becomes a bottom sheet instead of disappearing. */
+        display: flex;
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 400;
+        width: 100%;
+        min-width: 0;
+        height: min(72vh, 560px);
+        border-left: 0;
+        border-top: 1px solid var(--cc-border-soft);
+        border-radius: var(--cc-radius-lg) var(--cc-radius-lg) 0 0;
+        box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.6);
+        transform: translateY(100%);
+        visibility: hidden;
+        transition:
+          transform 0.4s var(--ease-butter),
+          visibility 0s linear 0.4s;
+      }
+
+      .terminal-panel.is-open {
+        transform: translateY(0);
+        visibility: visible;
+        transition:
+          transform 0.4s var(--ease-butter),
+          visibility 0s;
+      }
+
+      /* A scrim so the sheet reads as a layer above the content */
+      body.terminal-open::after {
+        position: fixed;
+        inset: 0;
+        z-index: 399;
+        content: "";
+        background: rgba(0, 0, 0, 0.55);
+        pointer-events: none;
+        animation: cc-fade-in 0.25s var(--ease-apple) both;
+      }
+
+      @keyframes cc-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* A grab handle at the top of the sheet */
+      .terminal-panel::before {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        z-index: 3;
+        width: 38px;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--cc-border-soft);
+        content: "";
+        transform: translateX(-50%);
+      }
+
+      /* The wordmark is decorative on a phone — shrink it so the
+         terminal output gets the space instead. */
+      .term-brand {
+        padding: 16px 14px 10px;
+        gap: 0;
+      }
+
+      .term-brand__ascii {
+        margin: 8px 0 2px;
+        font-size: 0.4rem;
+      }
+
+      .term-brand__ascii--sub {
+        margin: 2px 0 0;
+        font-size: 0.34rem;
+      }
+
+      .term-brand__title {
+        margin: 8px 0 0;
+        font-size: 0.85rem;
+      }
+
+      .term-brand__meta {
+        margin: 3px 0 8px;
+        font-size: 0.62rem;
+      }
+
+      /* Tappable tree rows */
+      .tree-item {
+        height: 38px;
+        font-size: 0.82rem;
+      }
+
+      /* Larger touch targets for filters and tabs */
+      .skill-filter {
+        padding: 10px 16px;
+        font-size: 0.88rem;
+      }
+
+      .tab {
+        height: 40px;
+        padding: 0 14px;
+      }
+
+      .tab__close {
+        width: 24px;
+        height: 24px;
+      }
+
+      .tree-item__close,
+      .menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      /* The terminal body gets more room on a phone */
+      .terminal-body {
+        min-height: 160px;
+        max-height: none;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 800px) {
+      /* Hide the traffic lights — they are meaningless on a phone
+         and they crowd the title bar. */
+      .traffic-lights {
+        display: none;
+      }
+
+      .title-bar {
+        height: 48px;
+        padding: 0 10px;
+        gap: 10px;
+      }
+
+      .title-bar__text {
+        font-size: 0.7rem;
+      }
+
+      /* Bigger, thumb-friendly menu button */
+      .menu-toggle {
+        width: 38px;
+        height: 30px;
+      }
+
+      .app-shell {
+        height: 100dvh;
+      }
+
+      .content-scroll {
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Hero breathes a little less on a phone */
+      .hero {
+        padding: 40px 0 36px;
+      }
+
+      .hero-description {
+        font-size: 0.98rem;
+        line-height: 1.6;
+      }
+
+      .status-bar {
+        font-size: 0.62rem;
+        gap: 12px;
+        padding: 5px 12px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .status-bar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .status-bar__spacer {
+        min-width: 8px;
+      }
+
+      .site-footer {
+        padding: 18px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Single-column hero metrics read better on a narrow phone */
+      .hero-metrics {
+        gap: 14px 22px;
+      }
+
+      .hero-metric {
+        width: auto;
+        flex: 1 1 40%;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.75rem, 8.5vw, 2.5rem);
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+    }
+
     /* Mobile: sidebar becomes an off-canvas drawer */
 
-    @media (max-width: 1100px) {
+    @media (min-width: 901px) and (max-width: 1100px) {
+      /* Between 900px and 1100px the terminal is still a side panel,
+         just narrower. Below 900px it becomes a full-width sheet. */
       .terminal-panel {
         width: 290px;
         min-width: 290px;
@@ -3453,12 +3703,6 @@
       .sidebar {
         width: 200px;
         min-width: 200px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .terminal-panel {
-        display: none;
       }
     }
 
@@ -3560,6 +3804,32 @@
           data-window-action="maximize"
         ></button>
       </div>
+
+      <button
+        class="terminal-toggle"
+        id="terminal-toggle"
+        type="button"
+        aria-label="Open terminal"
+        aria-expanded="false"
+        aria-controls="terminal-panel"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M3 4l4 4-4 4"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path d="M9 12h4" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
 
       <button
         class="menu-toggle"
@@ -5596,6 +5866,38 @@
       return tab;
     }
 
+    // ── Mobile terminal sheet ───────────────────────────────────
+
+    const terminalToggle = document.getElementById("terminal-toggle");
+    const terminalPanel = document.getElementById("terminal-panel");
+
+    function setTerminalSheet(open) {
+      if (!terminalPanel || !terminalToggle) return;
+
+      terminalPanel.classList.toggle("is-open", open);
+      terminalToggle.setAttribute("aria-expanded", String(open));
+      terminalToggle.setAttribute(
+        "aria-label",
+        open ? "Close terminal" : "Open terminal"
+      );
+      document.body.classList.toggle("terminal-open", open);
+
+      if (open) {
+        terminalField?.focus();
+      }
+    }
+
+    terminalToggle?.addEventListener("click", () => {
+      setTerminalSheet(!terminalPanel.classList.contains("is-open"));
+    });
+
+    // Close the sheet when a section is opened from the tree
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && terminalPanel?.classList.contains("is-open")) {
+        setTerminalSheet(false);
+      }
+    });
+
     // Tree click behaviour
     treeItems.forEach((item) => {
       item.addEventListener("click", (event) => {
@@ -5626,6 +5928,12 @@
         scrollContentTo(document.getElementById(section));
         setActiveTreeItem(section, false);
         closeSidebarDrawer();
+
+        // On a phone the terminal is a separate sheet — close it so
+        // the section the user just opened is actually visible.
+        if (window.matchMedia("(max-width: 900px)").matches) {
+          setTerminalSheet(false);
+        }
       });
     });
 
