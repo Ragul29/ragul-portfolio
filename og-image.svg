@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Ragul Murugan — AI Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0d0c"/>
+      <stop offset="100%" stop-color="#141211"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="88%" cy="8%" r="62%">
+      <stop offset="0%" stop-color="#c47a50" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#c47a50" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="1200" height="56" fill="#1a1816"/>
+  <rect x="0" y="56" width="1200" height="1" fill="#272421"/>
+  <circle cx="34" cy="28" r="8" fill="#c45b54"/>
+  <circle cx="60" cy="28" r="8" fill="#c4a43e"/>
+  <circle cx="86" cy="28" r="8" fill="#5eab5e"/>
+  <text x="116" y="34" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#5c564f">ragul@career</text>
+  <text x="238" y="34" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#3a3632">:</text>
+  <text x="252" y="34" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#847c72">portfolio</text>
+
+  <!-- rule -->
+  <rect x="72" y="128" width="140" height="3" fill="#c47a50"/>
+
+  <!-- name -->
+  <text x="72" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="68" font-weight="700" fill="#e6dfd6" letter-spacing="-2">Ragul Murugan</text>
+
+  <!-- role -->
+  <text x="72" y="298" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="600" fill="#c47a50" letter-spacing="-1">AI Engineer</text>
+
+  <!-- descriptor -->
+  <text x="72" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="400" fill="#847c72">Senior Software Engineer at Xerox</text>
+  <text x="72" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="400" fill="#847c72">7+ years · Cloud · .NET · AI document intelligence</text>
+
+  <!-- terminal card -->
+  <rect x="72" y="440" width="1056" height="126" rx="4" fill="#141211" stroke="#272421" stroke-width="1"/>
+  <rect x="72" y="440" width="1056" height="34" rx="4" fill="#1a1816"/>
+  <rect x="72" y="470" width="1056" height="4" fill="#1a1816"/>
+  <rect x="72" y="473" width="1056" height="1" fill="#272421"/>
+
+  <text x="96" y="463" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#5c564f">AI Engineer</text>
+  <text x="96" y="502" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#c47a50">&#8250;</text>
+  <text x="118" y="502" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#e2e8f0">name</text>
+  <text x="168" y="502" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#5c564f">:</text>
+  <text x="184" y="502" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#e2e8f0">Ragul Murugan</text>
+
+  <text x="96" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#c47a50">&#8250;</text>
+  <text x="118" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#e2e8f0">role</text>
+  <text x="168" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#5c564f">:</text>
+  <text x="184" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#e2e8f0">Senior Software Engineer @ Xerox</text>
+
+  <text x="600" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#c47a50">cloud</text>
+  <text x="668" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#5c564f">&#183;</text>
+  <text x="690" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#c47a50">backend</text>
+  <text x="780" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#5c564f">&#183;</text>
+  <text x="802" y="532" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#c47a50">agents</text>
+
+  <!-- status bar -->
+  <rect x="0" y="600" width="1200" height="30" fill="#1a1816"/>
+  <rect x="0" y="600" width="1200" height="1" fill="#272421"/>
+  <text x="72" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#5c564f">branch</text>
+  <text x="124" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#847c72">main</text>
+  <text x="196" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#5c564f">model</text>
+  <text x="248" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#847c72">senior-engineer</text>
+  <text x="410" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#5c564f">ctx</text>
+  <text x="446" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c47a50">7y+</text>
+  <text x="900" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#5c564f">stack</text>
+  <text x="946" y="620" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#847c72">aws / azure / .net</text>
+</svg>
